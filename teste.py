@@ -17,10 +17,15 @@ def fReturnExpression(vOne, vTwo, vExpression):
 
 print("Choice your command (sum/diff):")
 
-if sys.hexversion >= 0x3000000:
-    vCommand = input()
-else:
-    vCommand = raw_input()
+
+# necessary if I need to make a code that works for pyton 2 and 3 version
+#
+#if sys.hexversion >= 0x3000000:
+#    vCommand = input()
+#else:
+#    vCommand = raw_input()
+
+vCommand = input()
 
 print("First number: ")
 vFirstNumber = int(input())
