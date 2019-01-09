@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-vName = input("Whats your name? ")
-vAge = input("How old are you? ")
+vName = str(input("What's your name? ")) 
+vAge = int(input('How old are you? ')) 
 
-print("Ok I got it!")
-print("Hello ", vName, " you are ", vAge, " years old!")
-print("Nice too meet you.")
+print('Ok I got it!')
+print('Hello {} you are {} years old!'.format(vName,vAge))
+print('Nice too meet you.')
