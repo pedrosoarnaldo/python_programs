@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 vName = input("Whats your name? ")
 vAge = input("How old are you? ")
 
