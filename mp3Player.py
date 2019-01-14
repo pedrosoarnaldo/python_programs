@@ -1,7 +1,7 @@
+import pygame
 
-import mp3play
+pygame.mixer.init()
+pygame.mixer_music.load('example.mp3')
+pygame.mixer_music.play()
+pygame.event.wait()
 
-### Needs Windows XP to work
-filename = r'C:\cygwin64\home\arnaldo.pedroso\projetos\python_programs\luis-fonsi-despacito-ft-daddy-yankee.mp3'
-clip = mp3play.load(filename)
-clip.play()
