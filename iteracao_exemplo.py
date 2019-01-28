@@ -13,3 +13,15 @@ while i >= 1:
     i = i - 1
 
 print('Feliz Ano Novo!!!')
+
+x = 0
+
+''' comentario '''
+
+while x != 9:
+    print('Dentro do Loop')
+    x = int(input('Entre com número: '))
+    if x == 9:
+        break
+
+print('Fora do loop')
