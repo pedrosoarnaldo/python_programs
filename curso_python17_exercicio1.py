@@ -1,18 +1,21 @@
 lAllPerson = []
 lPeso = []
 lNome = []
+lperson = []
 
 ''' Cadastra as pessoas '''
 while True:
-    lperson = []
+    ''' lperson = [] pode ser substituido pela linha lperson.clear()'''
     lperson.append(str(input('Nome: ')))
     lperson.append(float(input('Peso: ')))
     lAllPerson.append(lperson[:])
-    vContinue = str(input('Continua? [s/n]'))
+    lperson.clear()
 
-    if vContinue == 'n':
+    vContinue = str(input('Continua? [s/n]'))
+    if vContinue in 'Nn':
         break
 
+print('-=' *30)
 print(f'Foram cadastras {len(lAllPerson)} pessoas.')
 
 
@@ -25,6 +28,7 @@ for vNome, vPeso in lAllPerson:
     if vPeso == max(lPeso):
         lNome.append(vNome)
 
+print('-=' *30)
 print (f'O maior peso foi de: {max(lPeso)} kg. Peso de: {lNome}')
 
 ''' Zera as listas intermediárias '''
@@ -40,4 +44,7 @@ for vNome, vPeso in lAllPerson:
     if vPeso == min(lPeso):
         lNome.append(vNome)
 
+print('-=' *30)
 print (f'O menor peso foi de: {min(lPeso)} kg. Peso de: {lNome}')
+
+print('-=' *30)

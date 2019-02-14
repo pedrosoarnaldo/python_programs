@@ -4,7 +4,7 @@ import urllib.request
 import nltk
 from nltk.corpus import stopwords
 
-response = urllib.request.urlopen('http://php.net/')
+response = urllib.request.urlopen('https://www1.folha.uol.com.br/esporte/2019/02/por-falta-de-alvara-ct-do-fla-foi-multado-30-vezes-e-lacrado-por-prefeitura.shtml')
 
 html = response.read()
 
@@ -28,5 +28,4 @@ freq = nltk.FreqDist(clean_tokens)
 for key, val in freq.items():
     print(str(key) + ':' + str(val))
 
-'''freq.plot(50,cumulative=False)'''
-
+freq.plot(10,cumulative=False)
