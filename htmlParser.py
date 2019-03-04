@@ -1,10 +1,9 @@
 import urllib.request as urllib2
 import nltk
-from nltk.corpus import stopwords
 import string
 import lxml.html as lh
 from lxml.html.clean import Cleaner as Limpador
-
+from nltk.corpus import stopwords
 
 def limpaHTML(html):
     limp = Limpador()
@@ -33,8 +32,6 @@ def geraFrequencia(u):
     rr = str(rr).replace('.', '. ')
     rr = str(rr).replace('-', ' ')
     rr = str(rr).replace('/', ' ')
-
-    ''' precisa excluir 18h55atualizada 119h44:1    '''
 
     ''' Tira a pontuação do texto'''
 
