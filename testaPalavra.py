@@ -1,16 +1,18 @@
-import json
-import requests
+import htmlParser
 
 def procuraPalavra(palavra):
-    api_url = f'http://dicionario-aberto.net/search-json/{palavra}'
-    resp = requests.get(api_url)
-    if resp == '<Response [404]>':
-        print('nao existe')
+    api_url = f'https://dicionario.priberam.org/{palavra}'
+    rr = htmlParser.geraHtmlLimpo(api_url)
+    return(rr)
+
+def palavraExiste(palavra):
+    r = procuraPalavra(palavra)
+    lista = str(r).split('    ')
+
+    stringRetorno = lista[896].split('.')
+
+    if stringRetorno[0] == 'Palavra não encontrada':
         return(0)
     else:
-        '''response = resp.json()'''
         return(1)
 
-''' x = procuraPalavra('ruas')
-print(x)
-'''
