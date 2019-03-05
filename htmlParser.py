@@ -4,6 +4,7 @@ import string
 import lxml.html as lh
 from lxml.html.clean import Cleaner as Limpador
 from nltk.corpus import stopwords
+import re
 
 def limpaHTML(html):
     limp = Limpador()
@@ -25,9 +26,30 @@ def geraHtmlLimpo(u):
     return(rr)
 
 def geraFrequencia(u):
+    lAuthor = ['autor', 'autores', 'author', 'authors']
+    lPublisher = ['publisher', 'copyright']
+    lHtml = []
+
+    vAuthor = 0
+    vPublisher = 0
+
+    ''' html_page = urllib2.urlopen(u) '''
+
     html_page = urllib2.urlopen(u)
     raw = html_page.read()
     rr = limpaHTML(raw)
+
+    lHtml = str(raw).lower().split()[:]
+
+    for author in lAuthor:
+        for rawHtml in lHtml:
+            if re.search(author, rawHtml.lower()):
+                vAuthor = 1
+
+    for publisher in lPublisher:
+        for rawHtml in lHtml:
+            if re.search(publisher, rawHtml.lower()):
+                vPublisher = 1
 
     rr = str(rr).replace('.', '. ')
     rr = str(rr).replace('-', ' ')
@@ -48,7 +70,7 @@ def geraFrequencia(u):
 
     freq = nltk.FreqDist(clean_tokens)
 
-    return (freq)
+    return (freq, vAuthor, vPublisher)
 
 ''' 
 u = "https://noticias.uol.com.br/internacional/ultimas-noticias/2019/02/22/venezuela-acao-do-brasil-e-humanitaria-e-nao-visa-politica-diz-porta-voz.htm"

@@ -1,10 +1,12 @@
-import htmlParser
+import criaDicionario
 
-url = "https://noticias.uol.com.br/internacional/ultimas-noticias/2019/02/22/venezuela-acao-do-brasil-e-humanitaria-e-nao-visa-politica-diz-porta-voz.htm"
-freq = htmlParser.geraFrequencia(url)
+lurl = ['http://terraeplana1.blogspot.com/2016/01/as-provas-da-terra-plana.html',
+        'https://noticia-tv.com/entrevista-helen-sbt/?utm_source=taboola&utm_medium=PHYTO-2B-DESK-CP1&utm_campaign=ofuxico']
 
-for key, val in freq.items():
-    print(key + ':' + str(val))
+''' Testar essa url http://reverberarvida.blogspot.com/2016/05/padre-jesuita-critica-atitude-dos.html'''
 
-freq.plot(10, cumulative=False)
+for url in lurl:
+    x = criaDicionario.criaDicionario(url)
 
+if x == 0:
+    print('Sucesso!')
