@@ -33,9 +33,8 @@ def geraFrequencia(u):
     vAuthor = 0
     vPublisher = 0
 
-    ''' html_page = urllib2.urlopen(u) '''
-
-    html_page = urllib2.urlopen(u)
+    req = urllib2.Request(u, headers={'User-Agent': "Magic Browser"})
+    html_page = urllib2.urlopen(req)
     raw = html_page.read()
     rr = limpaHTML(raw)
 

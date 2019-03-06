@@ -15,6 +15,7 @@ def criaDicionario(url):
     mycursor = mydb.cursor()
 
     (freq, vAuthor, vPublisher) = htmlParser.geraFrequencia(url)
+
     vPalavrasErradas = 0
     vPalavrasInseridas = 0
     vTotalWords = 0
@@ -35,6 +36,7 @@ def criaDicionario(url):
 
         for x in myresult:
             if x == 0:
+                '''print(f'Erro ---> {target}')'''
                 retornoDicionarioWeb = testaPalavra.palavraExiste(target)
 
                 if retornoDicionarioWeb == 0:
@@ -64,6 +66,7 @@ def criaDicionario(url):
     else:
         vEfake = 1
 
+    url = url[0:512]
     sql = str(f"INSERT INTO documentos(id_documento, url, num_palavras_erradas, num_palavras, tem_autor, tem_publicador, e_fake) VALUES "
             f"('{vHashDocumento}', '{url}', {vPalavrasErradas}, {vTotalWords}, {vAuthor}, {vPublisher}, {vEfake})")
     mycursor.execute(sql)
