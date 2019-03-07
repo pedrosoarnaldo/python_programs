@@ -37,7 +37,6 @@ def geraFrequencia(u):
     html_page = urllib2.urlopen(req)
     raw = html_page.read()
     rr = limpaHTML(raw)
-
     lHtml = str(raw).lower().split()[:]
 
     for author in lAuthor:
@@ -53,21 +52,27 @@ def geraFrequencia(u):
     rr = str(rr).replace('.', '. ')
     rr = str(rr).replace('-', ' ')
     rr = str(rr).replace('/', ' ')
+    rr = str(rr).replace('{', ' ')
+    rr = str(rr).replace('}', ' ')
 
     ''' Tira a pontuação do texto'''
 
     translator = str.maketrans('', '', string.punctuation)
 
-    tokens = [str(t).lower().translate(translator) for t in rr.split()]
-    clean_tokens = tokens[:]
+    tokens = [str(t).translate(translator) for t in rr.split()]
+    clean_tokens_lower = []
 
     for token in tokens:
-        if token in stopwords.words('portuguese'):
-            clean_tokens.remove(token)
-        if token.isdigit():
-            clean_tokens.remove(token)
+        if token not in stopwords.words('portuguese') or token.isdigit() != 'True':
+            if (re.findall('^[A-Z]+', token) and re.findall('\w[a-z][A-Z]+', token)) or (re.findall('^[a-z]+', token) and re.findall('\w[a-z][A-Z]+', token)):
+                quebraPalavra = re.sub(r"([A-Z])", r" \1", token).split()
+                for qp in quebraPalavra:
+                    qp = str(qp).lower()
+                    clean_tokens_lower.append(qp)
+            else:
+                clean_tokens_lower.append(token.lower())
 
-    freq = nltk.FreqDist(clean_tokens)
+    freq = nltk.FreqDist(clean_tokens_lower)
 
     return (freq, vAuthor, vPublisher)
 

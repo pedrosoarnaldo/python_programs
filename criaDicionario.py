@@ -14,6 +14,8 @@ def criaDicionario(url):
 
     mycursor = mydb.cursor()
 
+    f = open('dicionario_fake_news.log', 'a+')
+
     (freq, vAuthor, vPublisher) = htmlParser.geraFrequencia(url)
 
     vPalavrasErradas = 0
@@ -21,14 +23,14 @@ def criaDicionario(url):
     vTotalWords = 0
 
     for key, val in freq.items():
-        ''' print(key + ':' + str(val))
+        '''print(key + ':' + str(val))
         freq.plot(10, cumulative=False)'''
 
         target = normalize('NFKD', key).encode('ASCII', 'ignore').decode('ASCII')
         vTotalWords = vTotalWords + 1
 
         sql = str(f"SELECT count(*) FROM words where name = '{target}'")
-        ''' print(f'Palavra -> {target}') '''
+        '''print(f'Palavra -> {target}')'''
 
         mycursor.execute(sql)
         myresult = mycursor.fetchone()
@@ -52,7 +54,7 @@ def criaDicionario(url):
                         if vIgnora == 'C' or vIgnora == 'c':
                             vPalavrasErradas = vPalavrasErradas + 1
                 else:
-                    '''print(f'Inserindo palavra ---> {target}')'''
+                    f.write(f'Inserindo a palavra ----> {target}\n')
                     sql = str(f"INSERT INTO words(name) VALUES ('{target}')")
                     mycursor.execute(sql)
                     mydb.commit()

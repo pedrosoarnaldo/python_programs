@@ -60,25 +60,24 @@ def geraFrequencia(u):
     translator = str.maketrans('', '', string.punctuation)
 
     tokens = [str(t).translate(translator) for t in rr.split()]
-    clean_tokens = tokens[:]
+    clean_tokens_lower = []
 
     for token in tokens:
-        if token in stopwords.words('portuguese'):
-            clean_tokens.remove(token)
-        if token.isdigit():
-            clean_tokens.remove(token)
-        if re.findall('^[A-Z]+', token) and re.findall('\w[a-z][A-Z]+', token):
-            quebraPalavra = re.sub(r"([A-Z])", r" \1", token).split()
-            clean_tokens.remove(token)
-            for qp in quebraPalavra:
-                qp = str(qp).lower()
-                clean_tokens.append(qp)
+        if token not in stopwords.words('portuguese') or token.isdigit() != 'True':
+            if (re.findall('^[A-Z]+', token) and re.findall('\w[a-z][A-Z]+', token)) or (re.findall('^[a-z]+', token) and re.findall('\w[a-z][A-Z]+', token)):
+                print(f'Aqui ---> {token}')
+                quebraPalavra = re.sub(r"([A-Z])", r" \1", token).split()
+                for qp in quebraPalavra:
+                    qp = str(qp).lower()
+                    clean_tokens_lower.append(qp)
+            else:
+                clean_tokens_lower.append(token.lower())
 
-    freq = nltk.FreqDist(clean_tokens)
+    freq = nltk.FreqDist(clean_tokens_lower)
 
     return (freq, vAuthor, vPublisher)
 
-u = 'https://esporte.uol.com.br/futebol/ultimas-noticias/2019/03/06/como-mancha-verde-rompeu-imagem-negativa-ate-1-titulo-no-carnaval.htm'
+u = 'https://noticias.uol.com.br/cotidiano/ultimas-noticias/2019/03/06/jovem-morto-em-tiroteio-entre-folioes-faria-teste-no-fla-e-ajudava-padrasto.htm'
 (vFreq, vAuthor, vPublicher) = geraFrequencia(u)
 
 for key, val in vFreq.items():
