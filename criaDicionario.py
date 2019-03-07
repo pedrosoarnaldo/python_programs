@@ -61,23 +61,27 @@ def criaDicionario(url):
                     vPalavrasInseridas = vPalavrasInseridas + 1
 
     vHashDocumento = hash(target)
-    vEfakeStr = input(str('Esse documento é fake (s/n/d)? '))
+
+    '''vEfakeStr = input(str('Esse documento é fake (s/n/d)? '))
 
     if vEfakeStr == 'n' or vEfakeStr == 'N':
         vEfake = 0
     else:
-        vEfake = 1
+        vEfake = 1'''
+
+    vEfake = 2
 
     url = url[0:512]
     sql = str(f"INSERT INTO documentos(id_documento, url, num_palavras_erradas, num_palavras, tem_autor, tem_publicador, e_fake) VALUES "
-            f"('{vHashDocumento}', '{url}', {vPalavrasErradas}, {vTotalWords}, {vAuthor}, {vPublisher}, {vEfake})")
+              f"('{vHashDocumento}', '{url}', {vPalavrasErradas}, {vTotalWords}, {vAuthor}, {vPublisher}, {vEfake})")
     mycursor.execute(sql)
     mydb.commit()
     mydb.close()
 
-    print(f'Quantidade de palavras erradas: {vPalavrasErradas}')
+    '''print(f'Quantidade de palavras erradas: {vPalavrasErradas}')
     print(f'Quantidade de palavras inseridas no dicionario: {vPalavrasInseridas}')
     print(f'Author encontrado: {vAuthor}')
     print(f'Publisher encontrado: {vPublisher}')
-    print(f'Quantidade de palavras: {vTotalWords}')
-    return(1)
+    print(f'Quantidade de palavras: {vTotalWords}') '''
+
+    return 1

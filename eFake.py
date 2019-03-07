@@ -7,42 +7,44 @@ def classificaUrl(url):
                                    database='fakenews')
     mycursor = mydb.cursor()
 
-
-    sql = str(f"SELECT id_documento, num_palavras_erradas, num_palavras, tem_autor, tem_publicador, e_fake FROM documentos order by 1")
+    sql = str(f"SELECT id_documento, num_palavras_erradas, num_palavras, tem_autor, tem_publicador, e_fake FROM documentos where url <> '{url}' order by 1")
     mycursor.execute(sql)
     myresult = mycursor.fetchall()
-    print(myresult)
+    arrayDimensaoWord = []
+    arrayClassificacao = []
 
-    return(1)
+    for result in myresult:
+        arrayDimensaoWord.append(list(result[1:5]))
+        if result[5] == 0:
+            arrayClassificacao.append(0)
+        else:
+            arrayClassificacao.append(1)
 
-'''
-lisa=1
-irregular=0
-maca=1
-laranja=0
+    clf = tree.DecisionTreeClassifier()
+    clf = clf.fit(arrayDimensaoWord, arrayClassificacao)
 
-pomar=[[150, lisa], [130, lisa], [180, irregular], [160, irregular]]
-resultado=[maca, maca, laranja, laranja]
+    sql = str(f"SELECT num_palavras_erradas, num_palavras, tem_autor, tem_publicador FROM documentos "
+              f"where url = '{url}'")
+    mycursor.execute(sql)
+    myresult = mycursor.fetchone()
 
+    listaPredict = list(myresult)
+    resultadoUsuario = clf.predict([[listaPredict[0], listaPredict[1], listaPredict[2], listaPredict[3]]])
 
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(pomar, resultado)
-
-while True:
-    peso = int(input('Peso: '))
-    if peso == 999:
-        break
-
-    superficie = int(input('Superficie: 1->Lisa 0->Irregular :'))
-    resultadoUsuario = clf.predict([[peso, superficie]])
-
+    print('-'*30)
     if resultadoUsuario == 1:
-        vResultado = str(input('É uma maça certo? s/n: '))
+        vResultado = str(input('É fake certo? s/n: '))
+        if vResultado != 'S' or vResultado != 's':
+            vResultado = 0
     else:
-        vResultado = str(input('É uma laranja certo? s/n: '))
+        vResultado = str(input('É real certo? s/n: '))
+        if vResultado != 'S' or vResultado != 's':
+            vResultado = 1
 
-    if vResultado == 'n':
-        pomar = pomar + [[peso, superficie]]
+    sql = str(f"update documentos set e_fake = {vResultado} where url = '{url}'")
+    mycursor.execute(sql)
+    mydb.commit()
+    mydb.close()
 
-print(pomar)
-'''
+    print('-'*30)
+    return vResultado

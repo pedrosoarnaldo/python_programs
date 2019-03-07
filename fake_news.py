@@ -1,11 +1,13 @@
 import criaDicionario
+import eFake
 
-lurl = ['https://ultimosegundo.ig.com.br/brasil/2019-03-06/cameras-flagram-fugitivo-carnaval.html']
+lurl = ['http://g1.globo.com/politica/noticia/2010/12/lula-veta-projeto-que-incluia-cinco-vacinas-no-calendario-da-rede-publica.html']
 
 for url in lurl:
-    print('---'*30)
+    print('-'*255)
     print(f'{url}')
-    x = criaDicionario.criaDicionario(url)
+    print('-' *255)
+    vRetornoDicionario = criaDicionario.criaDicionario(url)
+    vRetornoClassifica = eFake.classificaUrl(url)
 
-if x == 1:
-    print('Sucesso!')
+print(f'Cria Dicionario ---> {vRetornoDicionario}. Classifica URL {vRetornoClassifica}.')
