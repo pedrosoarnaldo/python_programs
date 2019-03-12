@@ -1,7 +1,7 @@
 import criaDicionario
 import eFake
 
-lurl = ['http://g1.globo.com/politica/noticia/2010/12/lula-veta-projeto-que-incluia-cinco-vacinas-no-calendario-da-rede-publica.html']
+lurl = ['https://www1.folha.uol.com.br/poder/2019/03/fala-de-bolsonaro-gera-critica-e-mourao-tenta-fazer-de-crise-assunto-interno.shtml']
 
 for url in lurl:
     print('-'*255)
