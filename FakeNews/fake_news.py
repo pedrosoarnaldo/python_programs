@@ -8,7 +8,7 @@ mydb = mysql.connector.connect(user='root', password='Zse4nji9123!@#',
 mycursor = mydb.cursor()
 
 
-lurl = ['https://economia.uol.com.br/noticias/redacao/2019/05/28/renegociacao-dividas-caixa.htm']
+lurl = ['https://noticias.uol.com.br/politica/ultimas-noticias/2019/05/28/mesmo-apos-carta-ao-menos-20-senadores-querem-coaf-com-a-justica.htm']
 
 
 for url in lurl:
