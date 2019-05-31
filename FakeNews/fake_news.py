@@ -1,20 +1,22 @@
 import criaDicionario
 import eFake
-import mysql
+from DatabasePool import DatabasePool
 
-mydb = mysql.connector.connect(user='root', password='Zse4nji9123!@#',
-                               host='127.0.0.1',
-                               database='fakenews')
-mycursor = mydb.cursor()
+d = DatabasePool()
 
+try:
+    connector = d.open_connection()
+    cursor = connector.cursor()
+except:
+    print("Unable to open database!")
+    exit(0)
 
-lurl = ['https://noticias.uol.com.br/politica/ultimas-noticias/2019/05/28/mesmo-apos-carta-ao-menos-20-senadores-querem-coaf-com-a-justica.htm']
-
+lurl = ['https://g1.globo.com/df/distrito-federal/noticia/2019/05/29/presos-envolvidos-em-massacre-de-manaus-sao-transferidos-para-penitenciaria-federal-de-brasilia.ghtml']
 
 for url in lurl:
     sql = str(f"SELECT e_fake FROM documentos where url = '{url}'")
-    mycursor.execute(sql)
-    myresult = mycursor.fetchone()
+    cursor.execute(sql)
+    myresult = cursor.fetchone()
 
     try:
         for x in myresult:
@@ -30,3 +32,6 @@ for url in lurl:
         vRetornoDicionario = criaDicionario.criaDicionario(url)
         vRetornoClassifica = eFake.classificaUrl(url)
         print(f'Cria Dicionario ---> {vRetornoDicionario}. Classifica URL {vRetornoClassifica}.')
+
+    cursor.close()
+    connector.close()

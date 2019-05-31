@@ -1,14 +1,10 @@
-from typing import List, Any
-
-import mysql.connector
 import unidecode
 from tika import parser
+from DatabasePool import DatabasePool
 
-mydb = mysql.connector.connect(user='root', password='Zse4nji9123!@#',
-                                host='127.0.0.1',
-                                database='fakenews')
-
-mycursor = mydb.cursor()
+d = DatabasePool()
+connector = d.open_connection()
+cursor = connector.cursor()
 
 raw = parser.from_file('C:\\Users\\arnaldo.pedroso\\Downloads\\dict.pdf')
 l = str([raw['content']])
@@ -22,11 +18,12 @@ for word in l.split():
         try:
             i += 1
             sql = str(f"INSERT INTO words(name) VALUES ('{w}')")
-            mycursor.execute(sql)
-            mydb.commit()
+            cursor.execute(sql)
+            connector.commit()
         except:
             i -= 1
             continue
 
 print('Foram inseridas {} palavras no dicionario!'.format(i))
-mydb.close()
+connector.commit()
+cursor.close()

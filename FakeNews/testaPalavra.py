@@ -15,4 +15,3 @@ def palavraExiste(palavra):
         return(0)
     else:
         return(1)
-

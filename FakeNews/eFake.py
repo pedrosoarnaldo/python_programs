@@ -1,15 +1,20 @@
 from sklearn import tree
-import mysql.connector
+from DatabasePool import DatabasePool
 
 def classificaUrl(url):
-    mydb = mysql.connector.connect(user='root', password='Zse4nji9123!@#',
-                                   host='127.0.0.1',
-                                   database='fakenews')
-    mycursor = mydb.cursor()
+
+    d = DatabasePool()
+
+    try:
+        connector = d.open_connection()
+        cursor = connector.cursor()
+    except:
+        print("Unable to open database!")
+        exit(0)
 
     sql = str(f"SELECT id_documento, num_palavras_erradas, num_palavras, tem_autor, tem_publicador, e_fake FROM documentos where url <> '{url}' order by 1")
-    mycursor.execute(sql)
-    myresult = mycursor.fetchall()
+    cursor.execute(sql)
+    myresult = cursor.fetchall()
     arrayDimensaoWord = []
     arrayClassificacao = []
 
@@ -25,8 +30,8 @@ def classificaUrl(url):
 
     sql = str(f"SELECT num_palavras_erradas, num_palavras, tem_autor, tem_publicador FROM documentos "
               f"where url = '{url}'")
-    mycursor.execute(sql)
-    myresult = mycursor.fetchone()
+    cursor.execute(sql)
+    myresult = cursor.fetchone()
 
     listaPredict = list(myresult)
     resultadoUsuario = clf.predict([[listaPredict[0], listaPredict[1], listaPredict[2], listaPredict[3]]])
@@ -42,9 +47,10 @@ def classificaUrl(url):
             vResultado = 1
 
     sql = str(f"update documentos set e_fake = {vResultado} where url = '{url}'")
-    mycursor.execute(sql)
-    mydb.commit()
-    mydb.close()
+    cursor.execute(sql)
+    connector.commit()
+    cursor.close()
+    connector.close()
 
     print('-'*30)
     return vResultado
