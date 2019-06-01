@@ -7,6 +7,7 @@ from IPython.display import HTML
 subscription_key = "8b8eb83fb3ab4b3190bbfe6da37a3020"
 text_analytics_base_url = "https://brazilsouth.api.cognitive.microsoft.com/text/analytics/v2.1/"
 
+
 language_api_url = text_analytics_base_url + "languages"
 
 documents = { "documents": [
@@ -55,8 +56,8 @@ pprint(key_phrases)
 
 entities_url = text_analytics_base_url + "entities"
 
-documents = {"documents" : [
-  {"id": "1", "text": "Niki Lauda foi um grande piloto de fórmula 1. Campeão 3 vezes seguidas."}
+documents = {"documents": [
+  {"id": "1", "text": "Um dia um adeus e eu indo embora quanta loucura por tão pouca aventura."}
 ]}
 
 print("Entidades")
