@@ -63,19 +63,3 @@ class fakenews:
         key_words = response.json()
 
         return key_words
-
-
-''' How to test this class
-
-url = "https://educacao.uol.com.br/noticias/2019/06/01/mec-fica-isolado-apos-protestos-dizem-especialistas.htm"
-f = fakenews()
-t = f.hml_cleaner(url)
-d = f.check_language(url, t)
-s = f.check_sentiment(url, t)
-e = f.check_key_words(url, t)
-
-print(d)
-print(s)
-print(e)
-
-'''
