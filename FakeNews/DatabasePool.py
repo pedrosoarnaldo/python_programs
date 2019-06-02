@@ -1,4 +1,5 @@
 import mysql.connector
+from pymongo import MongoClient
 
 class DatabasePool():
     """Class created to optmize connection with database"""
@@ -12,3 +13,6 @@ class DatabasePool():
     def open_connection(self):
         return mysql.connector.connect(user=self.user_name, password=self.password,
                                        host=self.host_name, database=self.database_name)
+
+    def connect_mongo(self):
+        return MongoClient(self.host_name, 27017)
