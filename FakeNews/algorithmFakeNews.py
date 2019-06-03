@@ -66,7 +66,7 @@ def key_word_score(url_id):
 
 
 #List of urls to be analyzed
-l_url = ["https://noticias.bol.uol.com.br/especiais/a-favela-pode-ter-tudo/index.htm"]
+l_url = ["https://www.bol.uol.com.br/noticias/2019/05/31/damares-defende-que-escolas-discutam-abstinencia-sexual-e-critica-popey.htm"]
 
 for url in l_url:
 
@@ -81,7 +81,7 @@ for url in l_url:
     dict_url = {"url": url}
     d_url = url_collection.find(dict_url)
 
-    if url_collection.find({"url": url}).count() == 0:
+    if url_collection.find({"url": url}).count()== 0:
         url_id = url_collection.insert_one(dict_url).inserted_id
         print(f"Document url# {url_id} was inserted.")
     else:
