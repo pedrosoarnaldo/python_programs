@@ -1,21 +1,15 @@
-import urllib.request
+from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 
 
 class myHtmlClass:
     """This class is used to parse a html file and clean it converting to text."""
 
-    def __init__(self,
-                 url_to_be_analized="https://educacao.uol.com.br/noticias/2019/06/01/mec-fica-isolado-apos-protestos-dizem-especialistas.htm"):
-        self.url_to_be_analized = url_to_be_analized
+    def html_cleaner(self, url_to_be_analized):
 
-    def hml_cleaner(self, url_to_be_analized):
-
-        if url_to_be_analized == '':
-            url_to_be_analized = self.url_to_be_analized
-
-        html = urllib.request.urlopen(url_to_be_analized)
-        soup = BeautifulSoup(html, "html.parser")
+        html = Request(url_to_be_analized, headers={'User-Agent': 'Mozilla/5.0'})
+        web_byte = urlopen(html).read()
+        soup = BeautifulSoup(web_byte, "html.parser")
 
         for script in soup(["script", "style"]):
             script.extract()    # rip it out

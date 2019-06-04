@@ -1,56 +1,32 @@
 from sklearn import tree
 from DatabasePool import DatabasePool
 
-def classificaUrl(url):
 
-    d = DatabasePool()
+class fakenews():
+    """This class is responsible to verify if an url is fake or not"""
 
-    try:
-        connector = d.open_connection()
-        cursor = connector.cursor()
-    except:
-        print("Unable to open database!")
-        exit(0)
+    def load_tree(self):
 
-    sql = str(f"SELECT id_documento, num_palavras_erradas, num_palavras, tem_autor, tem_publicador, e_fake FROM documentos where url <> '{url}' order by 1")
-    cursor.execute(sql)
-    myresult = cursor.fetchall()
-    arrayDimensaoWord = []
-    arrayClassificacao = []
+        list_dimension = []
+        list_classification = []
+        d = DatabasePool()
+        c = d.connect_mongo()
 
-    for result in myresult:
-        arrayDimensaoWord.append(list(result[1:5]))
-        if result[5] == 0:
-            arrayClassificacao.append(0)
-        else:
-            arrayClassificacao.append(1)
+        database = c['fakenews']
+        url_collection = database['url']
 
-    clf = tree.DecisionTreeClassifier()
-    clf = clf.fit(arrayDimensaoWord, arrayClassificacao)
+        dict_colletion = url_collection.find({})
+        for i in dict_colletion:
+            ld = [i["avg_entityTypeScore"], i["avg_wikipediaScore"], i["language_score"], i["sentiment_score"], i["total_entityTypeScore"], i["total_wikipediaScore"]]
+            list_dimension.append(ld[:])
+            list_classification.append(i["is_fake"])
 
-    sql = str(f"SELECT num_palavras_erradas, num_palavras, tem_autor, tem_publicador FROM documentos "
-              f"where url = '{url}'")
-    cursor.execute(sql)
-    myresult = cursor.fetchone()
+        return list_dimension, list_classification
 
-    listaPredict = list(myresult)
-    resultadoUsuario = clf.predict([[listaPredict[0], listaPredict[1], listaPredict[2], listaPredict[3]]])
+    def classify_url(self, dimension):
+        ld, lc = self.load_tree()
 
-    print('-'*30)
-    if resultadoUsuario == 1:
-        vResultado = str(input('É fake certo? s/n: '))
-        if vResultado != 'S' or vResultado != 's':
-            vResultado = 0
-    else:
-        vResultado = str(input('É real certo? s/n: '))
-        if vResultado != 'S' or vResultado != 's':
-            vResultado = 1
+        clf = tree.DecisionTreeClassifier()
+        clf = clf.fit(ld, lc)
 
-    sql = str(f"update documentos set e_fake = {vResultado} where url = '{url}'")
-    cursor.execute(sql)
-    connector.commit()
-    cursor.close()
-    connector.close()
-
-    print('-'*30)
-    return vResultado
+        return clf.predict([dimension])

@@ -1,6 +1,7 @@
 import requests
-#from pprint import pprint
-#from IPython.display import HTML
+from sklearn import tree
+from DatabasePool import DatabasePool
+
 
 class fakenews:
     """This class analyze an url and says if the document is fakenews or not"""
@@ -17,7 +18,7 @@ class fakenews:
 
     ''' kill all scripts and style elements'''
 
-    def check_language(self, url_to_be_analized, text):
+    def check_language(self, text):
 
         if self.api != "languages":
             api = "languages"
@@ -25,14 +26,14 @@ class fakenews:
             api = self.api
 
         language_api_url = self.analitics_base_url + api
-        documents = {"documents": [{ "id":"1", "text": text}]}
+        documents = {"documents": [{"id": "1", "text": text}]}
 
         response = requests.post(language_api_url, headers=self.headers, json=documents)
         languages = response.json()
 
         return languages
 
-    def check_sentiment(self, url_to_be_analized, text):
+    def check_sentiment(self, text):
 
         if self.api != "sentiment":
             api = "sentiment"
@@ -48,7 +49,7 @@ class fakenews:
 
         return sentiment
 
-    def check_key_words(self, url_to_be_analized, text):
+    def check_key_words(self, text):
 
         if self.api != "entities":
             api = "entities"
@@ -63,3 +64,30 @@ class fakenews:
         key_words = response.json()
 
         return key_words
+
+    def load_tree(self):
+        list_dimension = []
+        list_classification = []
+
+        d = DatabasePool()
+        c = d.connect_mongo()
+
+        database = c['fakenews']
+        url_collection = database['url']
+
+        dict_colletion = url_collection.find({})
+        for i in dict_colletion:
+            ld = [i["avg_entityTypeScore"], i["avg_wikipediaScore"], i["language_score"], i["sentiment_score"],
+                  i["total_entityTypeScore"], i["total_wikipediaScore"]]
+            list_dimension.append(ld[:])
+            list_classification.append(i["is_fake"])
+
+        return list_dimension, list_classification
+
+    def classify_url(self, dimension):
+        ld, lc = self.load_tree()
+
+        clf = tree.DecisionTreeClassifier()
+        clf = clf.fit(ld, lc)
+
+        return clf.predict([dimension])
