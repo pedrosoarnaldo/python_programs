@@ -71,14 +71,17 @@ def key_word_score(url_id):
 
 def log_classification(p_is_fake):
     if p_is_fake == 0:
-        print("")
+        print("***"*30)
         print("Document is true")
+        print("***"*30)
+        print("")
         print("")
     else:
-        print("")
+        print("***"*30)
         print("FAKE NEWS!!!")
+        print("***"*30)
         print("")
-
+        print("")
 
 # Set fakenews object
 f = fakenews()
@@ -89,16 +92,14 @@ database = d['fakenews']
 
 #Documents to be analyzed
 documents = [
-    {"url": "https://noticias.uol.com.br/politica/ultimas-noticias/2019/06/04/lula-regime-semiaberto-procuradoria.htm", "is_fake": "0"},
-    {"url": "https://esporte.uol.com.br/futebol/ultimas-noticias/2019/06/04/vice-da-cbf-aposta-que-neymar-pede-dispensa-tem-novo-video-vindo.htm", "is_fake": ""},
-    {"url": "https://carros.uol.com.br/noticias/redacao/2019/06/04/bolsonaro-quer-fim-de-exame-de-drogas-e-multa-menor-por-rodar-sem-capacete.htm", "is_fake": "0"},
-    {"url": "http://guiasaude.me/antiacne-aa9/", "is_fake": ""}
+    {"url": "https://economia.ig.com.br/previdencia/reforma-urgente/2019-06-04/sem-a-reforma-nao-teremos-como-manter-os-gastos-publicos-alerta-economista.html", "is_fake": ""}
 ]
+
 for doc in documents:
     url = doc["url"]
-    print("")
+    print("==*"*30)
     print(f"Working with url {url}")
-    print("")
+    print("==*"*30)
 
     v_is_fake = doc["is_fake"]
 
@@ -157,7 +158,7 @@ for doc in documents:
             print(f"URL: {url} has been inserted.")
             print(f"URL id# is {url_id}.")
             print(f"Data id# is {data_to_be_analyzed_id}.")
-            print("")
+            print("--"*30)
     elif url_collection.find(dict_url).count() > 0:
             return_is_fake = [x["is_fake"] for x in d_url]
             log_classification(int(return_is_fake[0]))
@@ -214,3 +215,5 @@ for doc in documents:
         # Inserting data collection
         dict_data = {"url_id": url_id, "language": language, "sentiment": sentiment, "key_word": key_word}
         data_to_be_analyzed_id = data_collection.insert_one(dict_data).inserted_id
+#Finish
+exit(1)
