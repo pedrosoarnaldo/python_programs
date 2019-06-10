@@ -92,7 +92,7 @@ database = d['fakenews']
 
 #Documents to be analyzed
 documents = [
-    {"url": "https://economia.ig.com.br/previdencia/reforma-urgente/2019-06-04/sem-a-reforma-nao-teremos-como-manter-os-gastos-publicos-alerta-economista.html", "is_fake": ""}
+    {"url": "https://www.terra.com.br/noticias/tecnologia/walmart-comeca-a-entregar-compras-direto-na-geladeira-dos-clientes-nos-eua,15197004792e8d0bba957fcc21d0a3803ej9bdsx.html", "is_fake": "0"}
 ]
 
 for doc in documents:
@@ -190,7 +190,7 @@ for doc in documents:
         avg_wikipediaScore = float(sum_wikipediaScore / total_wikipediaScore)
 
         #Verify if the url is fake or not
-        is_fake = f.classify_url([avg_entityTypeScore, avg_wikipediaScore, vlanguage_score, vsentiment_score, sum_entityTypeScore,sum_wikipediaScore])
+        is_fake = f.classify_url([avg_entityTypeScore, avg_wikipediaScore, vlanguage_score, vsentiment_score, sum_entityTypeScore, sum_wikipediaScore])
 
         #Print classification of the url
         log_classification(int(is_fake[0]))
