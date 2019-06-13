@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49fe01df-380f-47ee-9465-8a2b6346c909" name="Default Changelist" comment="Programa em Python que lê um dicionário de dados em pdf e cadastra as palavras na minha tabela de dicionários.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithmFakeNews.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithmFakeNews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myHtmlClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/myHtmlClass.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,13 +14,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithmFakeNews.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+            <state relative-caret-position="153">
+              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myHtmlClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,6 +57,9 @@
       <find>get</find>
       <find>is_fake</find>
       <find>classify</find>
+      <find>Exception</find>
+      <find>html</find>
+      <find>prepare</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -64,19 +81,19 @@
         <option value="$PROJECT_DIR$/DatabasePool.py" />
         <option value="$PROJECT_DIR$/eFake.py" />
         <option value="$PROJECT_DIR$/Legado/eFake.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
-        <option value="$PROJECT_DIR$/fakenews.py" />
         <option value="$PROJECT_DIR$/myHmlClass.py" />
-        <option value="$PROJECT_DIR$/myHtmlClass.py" />
+        <option value="$PROJECT_DIR$/fakenews.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
         <option value="$PROJECT_DIR$/algorithmFakeNews.py" />
+        <option value="$PROJECT_DIR$/myHtmlClass.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1890" />
-    <option name="y" value="21" />
-    <option name="width" value="1500" />
-    <option name="height" value="871" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="170" />
+    <option name="y" value="91" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -84,6 +101,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,7 +122,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,28 +344,47 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1890" y="21" width="1500" height="871" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18125854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14508928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298791" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.86755955" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86755955" weight="0.40136054" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36394557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.20578231" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32991013" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3282313" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32777777" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13244048" side_tool="true" weight="0.4387755" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.2585034" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.29444444" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.27891156" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14506173" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298791" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86755955" visible="true" weight="0.40416667" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36394557" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.20578231" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32991013" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32777777" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13244048" side_tool="true" weight="0.4387755" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.29444444" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.27891156" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Corrigido, esses arquivos fazem parte da monografia." />
@@ -398,40 +434,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myHmlClass.py" />
+    <entry file="file://$PROJECT_DIR$/algoritmo.py" />
+    <entry file="file://$PROJECT_DIR$/eFake.py" />
     <entry file="file://$PROJECT_DIR$/DatabasePool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="245">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myHmlClass.py" />
-    <entry file="file://$PROJECT_DIR$/algoritmo.py" />
-    <entry file="file://$PROJECT_DIR$/eFake.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="-665">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myHtmlClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fakenews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="39" />
+        <state relative-caret-position="17">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -440,10 +469,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithmFakeNews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        <state relative-caret-position="153">
+          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myHtmlClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>

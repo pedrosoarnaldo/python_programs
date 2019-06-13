@@ -9,7 +9,9 @@ def get_dimension(paramenter_url):
         f = fakenews()
         m = myHtmlClass()
 
-        dimension_text = m.html_cleaner(paramenter_url)
+        dimension_text = m.prepare_text(paramenter_url)
+        dimension_text = dimension_text[:5120]
+        print(f"--->{dimension_text}")
         dimension_language = f.check_language(dimension_text)
         dimension_sentiment = f.check_sentiment(dimension_text)
         dimension_key_words = f.check_key_words(dimension_text)
@@ -83,6 +85,7 @@ def log_classification(p_is_fake):
         print("")
         print("")
 
+
 # Set fakenews object
 f = fakenews()
 
@@ -92,8 +95,10 @@ database = d['fakenews']
 
 #Documents to be analyzed
 documents = [
-    {"url": "https://www.terra.com.br/noticias/tecnologia/walmart-comeca-a-entregar-compras-direto-na-geladeira-dos-clientes-nos-eua,15197004792e8d0bba957fcc21d0a3803ej9bdsx.html", "is_fake": "0"}
+    {"url": "https://esporte.ig.com.br/futebol/internacional/2019-06-12/diretor-do-atletico-confirma-que-griezmann-vai-para-o-barcelona.html", "is_fake": ""}
+    #  {"url": "https://republicadecuritiba.net/2019/06/03/transparencia-mostra-que-bolsonaro-e-responsavel-pelo-maior-orcamento-da-educacao-na-historia/", "is_fake": ""},
 ]
+
 
 for doc in documents:
     url = doc["url"]
@@ -180,6 +185,7 @@ for doc in documents:
 
         #Determine score values
         vlanguage_score = float(language_score(url_id))
+
         vsentiment_score = float(sentiment_score(url_id))
         total_entityTypeScore, entityTypeScore, total_wikipediaScore, wikipediaScore = key_word_score(url_id)
 
