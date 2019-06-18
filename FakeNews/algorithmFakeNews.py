@@ -95,7 +95,7 @@ database = d['fakenews']
 
 #Documents to be analyzed
 documents = [
-    {"url": "https://esporte.ig.com.br/futebol/internacional/2019-06-12/diretor-do-atletico-confirma-que-griezmann-vai-para-o-barcelona.html", "is_fake": ""}
+    {"url": "https://www1.folha.uol.com.br/mercado/2019/06/odebrecht-entra-com-maior-pedido-de-recuperacao-judicial-da-historia-do-pais.shtml", "is_fake": ""}
     #  {"url": "https://republicadecuritiba.net/2019/06/03/transparencia-mostra-que-bolsonaro-e-responsavel-pelo-maior-orcamento-da-educacao-na-historia/", "is_fake": ""},
 ]
 
