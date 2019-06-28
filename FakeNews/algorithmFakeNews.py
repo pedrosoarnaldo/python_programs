@@ -94,9 +94,14 @@ d = open_database()
 database = d['fakenews']
 
 #Documents to be analyzed
+# if you need to training a text inform is_fake parameter with the knowledge value
+# if you need to classify the text, pass is_fake parameter with blank value
+# 0 = not fake
+# 1 = is fake
+
 documents = [
-    {"url": "https://www1.folha.uol.com.br/mercado/2019/06/odebrecht-entra-com-maior-pedido-de-recuperacao-judicial-da-historia-do-pais.shtml", "is_fake": ""}
-    #  {"url": "https://republicadecuritiba.net/2019/06/03/transparencia-mostra-que-bolsonaro-e-responsavel-pelo-maior-orcamento-da-educacao-na-historia/", "is_fake": ""},
+    {"url": "https://www1.folha.uol.com.br/mercado/2019/06/odebrecht-entra-com-maior-pedido-de-recuperacao-judicial-da-historia-do-pais.shtml", "is_fake": ""},
+    {"url": "https://republicadecuritiba.net/2019/06/03/transparencia-mostra-que-bolsonaro-e-responsavel-pelo-maior-orcamento-da-educacao-na-historia/", "is_fake": "1"}
 ]
 
 
