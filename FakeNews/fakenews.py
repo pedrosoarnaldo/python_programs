@@ -8,8 +8,10 @@ class fakenews:
 
     def __init__(self,
                  analitics_base_url="https://brazilsouth.api.cognitive.microsoft.com/text/analytics/v2.1/",
-                 api="languages",
-                 subscription_key="8b8eb83fb3ab4b3190bbfe6da37a3020"):
+                 api="languages"):
+
+        f = open('/Users/arnaldo.pedroso/git/python_programs/FakeNews/fakenews.conf', "r")
+        subscription_key = f.read()
 
         self.analitics_base_url = analitics_base_url
         self.api = api
