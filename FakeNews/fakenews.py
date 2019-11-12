@@ -10,7 +10,7 @@ class fakenews:
                  analitics_base_url="https://brazilsouth.api.cognitive.microsoft.com/text/analytics/v2.1/",
                  api="languages"):
 
-        f = open('/Users/arnaldo.pedroso/git/python_programs/FakeNews/fakenews.conf', "r")
+        f = open('/Users/arnaldo.pedroso/git/Monografia/fakenews.conf', "r")
         subscription_key = f.read()
 
         self.analitics_base_url = analitics_base_url

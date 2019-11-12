@@ -2,7 +2,7 @@ from DatabasePool import DatabasePool
 from fakenews import fakenews
 from myHtmlClass import myHtmlClass
 from bson.objectid import ObjectId
-
+import json
 
 def get_dimension(paramenter_url):
     try:
@@ -11,7 +11,7 @@ def get_dimension(paramenter_url):
 
         dimension_text = m.prepare_text(paramenter_url)
         dimension_text = dimension_text[:5120]
-        print(f"--->{dimension_text}")
+        # print(f"--->{dimension_text}<---")
         dimension_language = f.check_language(dimension_text)
         dimension_sentiment = f.check_sentiment(dimension_text)
         dimension_key_words = f.check_key_words(dimension_text)
@@ -50,6 +50,7 @@ def sentiment_score(url_id):
 
 
 def key_word_score(url_id):
+    #print("url_id ---->", url_id)
     x = data_collection.find({"url_id": url_id})
     entityTypeScore = []
     wikipediaScore = []
@@ -73,20 +74,18 @@ def key_word_score(url_id):
 
 def log_classification(p_is_fake):
     if p_is_fake == 0:
-        print("***"*30)
         print("Document is true")
         print("***"*30)
         print("")
         print("")
     else:
-        print("***"*30)
         print("FAKE NEWS!!!")
         print("***"*30)
         print("")
         print("")
 
 
-# Set fakenews object
+# Set fakenews objectx
 f = fakenews()
 
 # Set database
@@ -94,17 +93,21 @@ d = open_database()
 database = d['fakenews']
 
 #Documents to be analyzed
-# if you need to training a text inform is_fake parameter with the knowledge value
+# if you need to training a text, inform is_fake parameter with the knowledge value
 # if you need to classify the text, pass is_fake parameter with blank value
 # 0 = not fake
 # 1 = is fake
 
-documents = [
-    {"url": "https://g1.globo.com/politica/noticia/2019/08/08/moro-diz-a-fux-que-nao-destruiria-mensagens-obtidas-por-hackers-e-que-houve-mal-entendido.ghtml", "is_fake": ""}
-]
+#documents = [
+#    {"url": "https://noticia-tv.com/entrevista-helen-sbt/?utm_source=taboola&utm_medium=PHYTO-2B-DESK-CP1&utm_campaign=editoraabril-exame", "is_fake":"1"},
+#]
 
 
-for doc in documents:
+json_file = open("/Users/arnaldo.pedroso/git/Monografia/news.json", "r", encoding="utf-8")
+
+news = json.load(json_file)
+
+for doc in news:
     url = doc["url"]
     print("==*"*30)
     print(f"Working with url {url}")
@@ -125,8 +128,14 @@ for doc in documents:
 
     d_url = url_collection.find(dict_url)
     if v_is_fake is not "":
-        if url_collection.find(dict_url).count() > 0:
-            return_is_fake = [x["is_fake"] for x in d_url]
+        if url_collection.count_documents(dict_url) >0:
+            try:
+                return_is_fake = [x["is_fake"] for x in d_url]
+            except:
+                print("Error - ignoring this url")
+                url_collection.delete_one({"url": url})
+                continue
+
             log_classification(int(return_is_fake[0]))
             continue
         else:
@@ -134,7 +143,13 @@ for doc in documents:
             url_id = url_collection.insert_one(dict_url).inserted_id
 
             # Get dimensions
-            language, sentiment, key_word = get_dimension(url)
+
+            try:
+                language, sentiment, key_word = get_dimension(url)
+            except:
+                url_collection.delete_one({"url": url})
+                continue
+
 
             # Prepare data to be recorded
             dict_data = {"url_id": url_id, "language": language, "sentiment": sentiment, "key_word": key_word}
@@ -148,10 +163,18 @@ for doc in documents:
             total_entityTypeScore, entityTypeScore, total_wikipediaScore, wikipediaScore = key_word_score(url_id)
 
             sum_entityTypeScore = float(sum(entityTypeScore))
-            avg_entityTypeScore = float(sum_entityTypeScore / total_entityTypeScore)
+
+            try:
+                avg_entityTypeScore = float(sum_entityTypeScore / total_entityTypeScore)
+            except ZeroDivisionError:
+                avg_entityTypeScore = 0
 
             sum_wikipediaScore = float(sum(wikipediaScore))
-            avg_wikipediaScore = float(sum_wikipediaScore / total_wikipediaScore)
+
+            try:
+                avg_wikipediaScore = float(sum_wikipediaScore / total_wikipediaScore)
+            except ZeroDivisionError:
+                avg_wikipediaScore = 0
 
             url_collection.update_one({"url": url}, {"$set":
                                                          {"language_score": vlanguage_score,
@@ -168,8 +191,13 @@ for doc in documents:
             print(f"URL id# is {url_id}.")
             print(f"Data id# is {data_to_be_analyzed_id}.")
             print("--"*30)
-    elif url_collection.find(dict_url).count() > 0:
-            return_is_fake = [x["is_fake"] for x in d_url]
+    elif url_collection.count_documents(dict_url) > 0:
+            try:
+                return_is_fake = [x["is_fake"] for x in d_url]
+            except:
+                print("Error - ignoring this url")
+                url_collection.delete_one({"url": url})
+                continue
             log_classification(int(return_is_fake[0]))
             continue
     else:
