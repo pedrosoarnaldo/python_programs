@@ -33,14 +33,33 @@ clf = tree.DecisionTreeClassifier()
 clf = clf.fit(lf, lc)
 
 p = PoemClassifier
-a = p.linetoarray("Outro que martírios embrutece")
+
+verso = [
+"De tanto ver lavar a sobrinha"
+"pequenininha em grande bacia,",
+"quis imitar o banho da Mirinha,",
+"que a mão batia n'água e sorria.",
+"A Vovó Ana, então, na carinha,",
+"passava a mão, sabão... sorria,",
+"achava em tudo uma gracinha...",
+"toalha, fralda e logo trazia",
+"minha boneca para tomar",
+"banho também, porém, no verão,",
+"outro boneco, eu quis ganhar...",
+"bem leve e grande... mas desmanchou",
+"porque era feito com papelão",
+"pus-me a chorar, meu sonho acabou!"
+    ]
+
 ld = []
-li = a.split()
-for l in li:
-    ld.append(l[:])
 
-while len(ld) <= 69:
-    ld.append('0')
-
-print(ld)
-print(clf.predict([ld]))
+for palavra in verso:
+    a = p.linetoarray(palavra)
+    li = a.split()
+    for l in li:
+        ld.append(l[:])
+    while len(ld) <= 69:
+        ld.append('0')
+    print(ld)
+    print(clf.predict([ld]))
+    ld.clear()
