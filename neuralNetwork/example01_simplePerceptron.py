@@ -36,6 +36,14 @@ e = np.zeros(6)
 # Define a matriz de pesos.
 W = np.ones([1, 3])  # Duas entradas e o bias !
 
+
+def funcaoAtivacao(valor):
+    if valor <= 0.0:
+        return -1
+    else:
+        return 1
+
+
 for j in range(numEpocas):
     for k in range(numAmostras):
         # Insere o bias no vetor de entrada.
@@ -45,7 +53,8 @@ for j in range(numEpocas):
         V = np.dot(W, Xb)
 
         # Calcula a saída do perceptron.
-        Yr = np.sign(V)
+        #Yr = np.sign(V)
+        Yr = funcaoAtivacao(V)
 
         # Calcula o erro: e = (Y - Yr)
         e[k] = Y[k] - Yr
@@ -55,3 +64,8 @@ for j in range(numEpocas):
 
 # print(W)
 print("Vetor de errors (e) = " + str(e))
+
+print("Validando minha entrada de dados:")
+ValidaEntrada = np.dot(W, [1, 122, 4.7])
+
+print(funcaoAtivacao(ValidaEntrada))
