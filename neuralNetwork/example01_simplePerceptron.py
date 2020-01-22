@@ -53,8 +53,17 @@ for j in range(numEpocas):
         V = np.dot(W, Xb)
 
         # Calcula a saída do perceptron.
+        # Sigmoide
         #Yr = np.sign(V)
+
+        # Degrau bipolar
         Yr = funcaoAtivacao(V)
+
+        # Degrau bipolar ----- NÃO ENTENDI COMO USAR
+        # Yr = np.heaviside(V, 1)
+
+        # Tangenge hiberbolica
+        #Yr = np.tanh(V)
 
         # Calcula o erro: e = (Y - Yr)
         e[k] = Y[k] - Yr
@@ -62,10 +71,10 @@ for j in range(numEpocas):
         # Treinando a rede.
         W = W + eta * e[k] * Xb
 
-# print(W)
 print("Vetor de errors (e) = " + str(e))
 
-print("Validando minha entrada de dados:")
-ValidaEntrada = np.dot(W, [1, 122, 4.7])
+print("Minha entrada de dados tem que ser : -1")
+ValidaEntrada = np.dot([-2420.4, 116.6, -2502.09999999], [1, 122, 6.8])
 
-print(funcaoAtivacao(ValidaEntrada))
+print("O valor estimado pela rede foi: ", funcaoAtivacao(ValidaEntrada))
+
