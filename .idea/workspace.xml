@@ -2,40 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/neuralNetwork/neuronioJaTreinado.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/python_programs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_programs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poem/xxx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neuralNetwork/example01_simplePerceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/example01_simplePerceptron.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TJScuiou4bHopAiGm85rXxE2cr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/app-1.6.6/resources/app/git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/neuralNetwork" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.scratch">
+  <component name="RunManager" selected="Python.neuronioJaTreinado">
     <configuration name="Poem" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -57,7 +63,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="algorithmFakeNews" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="_pydev_execfile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -65,11 +71,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FakeNews" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_imps" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FakeNews/algorithmFakeNews.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="fake_news" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="example01_simplePerceptron" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,11 +92,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FakeNews" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FakeNews/fake_news.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/example01_simplePerceptron.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -99,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="htmlParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="neuronioJaTreinado" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,11 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FakeNews" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FakeNews/htmlParser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/neuronioJaTreinado.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,13 +149,25 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.neuronioJaTreinado" />
+        <item itemvalue="Python.example01_simplePerceptron" />
+        <item itemvalue="Python._pydev_execfile" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.Poem" />
-        <item itemvalue="Python.algorithmFakeNews" />
-        <item itemvalue="Python.fake_news" />
-        <item itemvalue="Python.htmlParser" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -169,7 +187,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573177438594</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="simple perceptron example">
+      <created>1579568949096</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579568949096</updated>
+    </task>
+    <task id="LOCAL-00003" summary="simple perceptron example">
+      <created>1579569627578</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579569627578</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +219,59 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created a config file to key in azure." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a config file to key in azure." />
+    <MESSAGE value="simple perceptron example" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple perceptron example" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="259" y="23" key="CommitChangelistDialog2" timestamp="1579658129722">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1579568948777" />
+    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.716@0.23.1280.716" timestamp="1579658129722" />
+    <state width="1249" height="146" key="GridCell.Tab.0.bottom" timestamp="1579658044336">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="172" key="GridCell.Tab.0.bottom/0.23.1280.715@0.23.1280.715" timestamp="1579569040044" />
+    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579658044336" />
+    <state width="1249" height="146" key="GridCell.Tab.0.center" timestamp="1579658044335">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="172" key="GridCell.Tab.0.center/0.23.1280.715@0.23.1280.715" timestamp="1579569040043" />
+    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1579658044335" />
+    <state width="1249" height="146" key="GridCell.Tab.0.left" timestamp="1579658044334">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="172" key="GridCell.Tab.0.left/0.23.1280.715@0.23.1280.715" timestamp="1579569040042" />
+    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1579658044334" />
+    <state width="1249" height="146" key="GridCell.Tab.0.right" timestamp="1579658044335">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="172" key="GridCell.Tab.0.right/0.23.1280.715@0.23.1280.715" timestamp="1579569040043" />
+    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1579658044335" />
+    <state width="1249" height="215" key="GridCell.Tab.1.bottom" timestamp="1579569408404">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579569408404" />
+    <state width="1249" height="215" key="GridCell.Tab.1.center" timestamp="1579569408403">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.center/0.23.1280.716@0.23.1280.716" timestamp="1579569408403" />
+    <state width="1249" height="215" key="GridCell.Tab.1.left" timestamp="1579569408403">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.left/0.23.1280.716@0.23.1280.716" timestamp="1579569408403" />
+    <state width="1249" height="215" key="GridCell.Tab.1.right" timestamp="1579569408404">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.right/0.23.1280.716@0.23.1280.716" timestamp="1579569408404" />
+    <state x="136" y="23" width="997" height="715" key="SettingsEditor" timestamp="1579569005411">
+      <screen x="0" y="23" width="1280" height="715" />
+    </state>
+    <state x="136" y="23" width="997" height="715" key="SettingsEditor/0.23.1280.715@0.23.1280.715" timestamp="1579569005411" />
+    <state x="312" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1579652636557">
+      <screen x="0" y="23" width="1280" height="713" />
+    </state>
+    <state x="312" y="205" key="com.intellij.ide.util.TipDialog/0.23.1280.713@0.23.1280.713" timestamp="1579652636557" />
+    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.715@0.23.1280.715" timestamp="1579568870587" />
   </component>
 </project>
