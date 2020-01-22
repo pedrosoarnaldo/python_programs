@@ -1,3 +1,4 @@
+from datetime import datetime
 import numpy as np
 import csv
 
@@ -7,7 +8,6 @@ sepala_largura = []
 petala_comprimento = []
 petala_largura = []
 classe_da_flor = []
-
 
 def treeloader(filename):
     fo = open(filename, 'r')
@@ -20,20 +20,24 @@ def treeloader(filename):
         petala_largura.append(float(c4))
 
         if c5 == "Iris-setosa":
-            value = 1
+            value = -1
         elif c5 == "Iris-versicolor":
-            value = 2
+            value = 0
         else:
-            value = 3
+            value = 1
 
         classe_da_flor.append(value)
 
+
+### Inicio do programa
+
+dtinicial = datetime.now()
 
 treeloader('iris.data')
 
 
 # Número de épocas
-numEpocas = 65000
+numEpocas = 400000
 
 # Número de amostras
 numAmostras = len(classe_da_flor)
@@ -54,7 +58,7 @@ X = np.vstack((scomprimento, slargura, pcomprimento, plargura))
 Y = np.array(classe_da_flor)
 
 # Taxa de aprendizado.
-eta = 0.1
+eta = 0.95
 
 # Array para amazernar os erros.
 e = np.zeros(numAmostras)
@@ -70,6 +74,7 @@ def funcaoAtivacao(valor):
         return 1
 
 for j in range(numEpocas):
+    #print("Número de épocas: ", j)
     for k in range(numAmostras):
         # Insere o bias no vetor de entrada.
         Xb = np.hstack((bias, X[:, k]))
@@ -88,3 +93,4 @@ for j in range(numEpocas):
 
 print("Vetor de errors (e) = " + str(e))
 
+print(dtinicial - datetime.now())
