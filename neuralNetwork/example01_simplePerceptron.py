@@ -5,6 +5,9 @@ Created on Wed Jan 31 18:24:00 2018
 @author: jmarcos
 """
 import numpy as np
+from datetime import datetime
+
+dtinicial = datetime.now()
 
 # Define o número de épocas da simulação e o número de atributos
 numEpocas = 65000  # 70000
@@ -77,4 +80,4 @@ print("Minha entrada de dados tem que ser : -1")
 ValidaEntrada = np.dot([-2420.4, 116.6, -2502.09999999], [1, 122, 6.8])
 
 print("O valor estimado pela rede foi: ", funcaoAtivacao(ValidaEntrada))
-
+print("Decorridos: ", datetime.now() - dtinicial)
