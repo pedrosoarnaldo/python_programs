@@ -37,7 +37,7 @@ treeloader('iris.data')
 
 
 # Número de épocas
-numEpocas = 400000
+numEpocas = 100000
 
 # Número de amostras
 numAmostras = len(classe_da_flor)
@@ -58,7 +58,7 @@ X = np.vstack((scomprimento, slargura, pcomprimento, plargura))
 Y = np.array(classe_da_flor)
 
 # Taxa de aprendizado.
-eta = 0.95
+eta = 0.5
 
 # Array para amazernar os erros.
 e = np.zeros(numAmostras)
@@ -92,5 +92,6 @@ for j in range(numEpocas):
         W = W + eta * e[k] * Xb
 
 print("Vetor de errors (e) = " + str(e))
+print("Pesos: ", W)
 
-print(dtinicial - datetime.now())
+print("Decorridos: ", datetime.now() - dtinicial)
