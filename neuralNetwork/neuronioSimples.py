@@ -4,7 +4,7 @@ from datetime import datetime
 dtinicial = datetime.now()
 
 # Define o número de épocas da simulação e o número de atributos
-numEpocas = 200000
+numEpocas = 65000
 numAmostras = 6
 
 # Atributos
@@ -16,7 +16,7 @@ bias = 1
 
 # Entrada do Perceptron.
 X = np.vstack((peso, pH))  # Ou X = np.asarray([peso, pH])
-Y = np.array([[-1, 1], [1, 1], [-1, 1], [-1, 1], [1, -1], [-1, 1]])
+Y = np.array([[-1, 1], [1, 1], [-1, 1], [-1, 1], [1, -1], [1, 1]])
 
 # Classes
 # +1, +1 = C1
@@ -27,11 +27,10 @@ Y = np.array([[-1, 1], [1, 1], [-1, 1], [-1, 1], [1, -1], [-1, 1]])
 eta = 0.1
 
 # Array para amazernar os erros.
-e = np.zeros([6, 2])
+e = np.zeros(6)
 
 # Define a matriz de pesos.
 W = np.ones([2, 3])  # Duas entradas e o bias !
-
 
 def funcaoAtivacao(valor):
     if valor < 0.0:
@@ -47,16 +46,16 @@ for j in range(numEpocas):
             Xb = np.hstack((bias, X[:, k]))
 
             # Calcula o vetor campo induzido.
-            V = np.dot(W[i], Xb)
+            V = np.dot(W[0], Xb)
 
             # Degrau bipolar
             Yr = funcaoAtivacao(V)
 
             # Calcula o erro: e = (Y - Yr)
-            e[k][i] = Y[k][i] - Yr
+            e[k] = Y[k][0] - Yr
 
             # Treinando a rede.
-            W[i] = W[i] + eta * e[k][i] * Xb
+            W[0] = W[0] + eta * e[k] * Xb
         #print("Peso ", W[i])
 
 print("")
@@ -82,7 +81,7 @@ print("Decorridos: ", datetime.now() - dtinicial)
 print("")
 acerto = 0
 for i in range(numAmostras):
-    if e[i][0] == e[i][1] and e[i][0] == 0:
+    if e[i] == 0:
         acerto = acerto + 1
 
 tx_acerto = (acerto / numAmostras) * 100
