@@ -49,7 +49,7 @@ pcomprimento = np.array(petala_comprimento)
 plargura = np.array(petala_largura)
 
 # bias
-bias = 1
+bias = 2
 
 # Entrada do Perceptron
 X = np.vstack((scomprimento, slargura, pcomprimento, plargura))
