@@ -12,7 +12,7 @@ peso = np.array([113, 122, 107, 98, 115, 120])
 pH = np.array([6.8, 4.7, 5.2, 3.6, 2.9, 4.2])
 
 # bias
-bias = 0.5
+bias = 1
 
 # Entrada do Perceptron.
 X = np.vstack((peso, pH))  # Ou X = np.asarray([peso, pH])
