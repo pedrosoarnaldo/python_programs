@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/neuralNetwork/neuronioJaTreinado.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_programs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_programs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neuralNetwork/example01_simplePerceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/example01_simplePerceptron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neuralNetwork/neuronioJaTreinado.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/neuronioJaTreinado.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,28 +39,7 @@
       <recent name="$PROJECT_DIR$/neuralNetwork" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.neuronioJaTreinado">
-    <configuration name="Poem" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_programs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Poem" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Poem/Poem.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.irisClassifier">
     <configuration name="_pydev_execfile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,6 +82,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="irisClassifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_programs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="neuronioJaTreinado" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="neuronioSimples" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,11 +132,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/neuronioSimples.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.irisClassifier" />
         <item itemvalue="Python.neuronioJaTreinado" />
+        <item itemvalue="Python.neuronioSimples" />
         <item itemvalue="Python.example01_simplePerceptron" />
         <item itemvalue="Python._pydev_execfile" />
-        <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.Poem" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +199,112 @@
       <option name="project" value="LOCAL" />
       <updated>1579569627578</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="simple perceptron example">
+      <created>1579658121992</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579658121992</updated>
+    </task>
+    <task id="LOCAL-00005" summary="simple perceptron example">
+      <created>1579658129952</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579658129952</updated>
+    </task>
+    <task id="LOCAL-00006" summary="simple perceptron example">
+      <created>1579659818851</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579659818851</updated>
+    </task>
+    <task id="LOCAL-00007" summary="simple perceptron example">
+      <created>1579660259757</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579660259757</updated>
+    </task>
+    <task id="LOCAL-00008" summary="simple perceptron example">
+      <created>1579673003039</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579673003039</updated>
+    </task>
+    <task id="LOCAL-00009" summary="simple perceptron example">
+      <created>1579673041867</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579673041867</updated>
+    </task>
+    <task id="LOCAL-00010" summary="simple perceptron example">
+      <created>1579673053053</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579673053053</updated>
+    </task>
+    <task id="LOCAL-00011" summary="simple perceptron example">
+      <created>1579674631406</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579674631406</updated>
+    </task>
+    <task id="LOCAL-00012" summary="simple perceptron example">
+      <created>1579738027427</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579738027427</updated>
+    </task>
+    <task id="LOCAL-00013" summary="simple perceptron example">
+      <created>1579749235496</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1579749235496</updated>
+    </task>
+    <task id="LOCAL-00014" summary="simple perceptron example">
+      <created>1579782544594</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579782544594</updated>
+    </task>
+    <task id="LOCAL-00015" summary="simple perceptron example">
+      <created>1579782560443</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1579782560443</updated>
+    </task>
+    <task id="LOCAL-00016" summary="simple perceptron example">
+      <created>1579782644968</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579782644969</updated>
+    </task>
+    <task id="LOCAL-00017" summary="simple perceptron example">
+      <created>1579783305370</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1579783305370</updated>
+    </task>
+    <task id="LOCAL-00018" summary="simple perceptron example">
+      <created>1579783395152</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579783395152</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,55 +326,74 @@
     <option name="LAST_COMMIT_MESSAGE" value="simple perceptron example" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="259" y="23" key="CommitChangelistDialog2" timestamp="1579658129722">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1579568948777" />
-    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.716@0.23.1280.716" timestamp="1579658129722" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom" timestamp="1579658044336">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="172" key="GridCell.Tab.0.bottom/0.23.1280.715@0.23.1280.715" timestamp="1579569040044" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579658044336" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center" timestamp="1579658044335">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="172" key="GridCell.Tab.0.center/0.23.1280.715@0.23.1280.715" timestamp="1579569040043" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1579658044335" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left" timestamp="1579658044334">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="172" key="GridCell.Tab.0.left/0.23.1280.715@0.23.1280.715" timestamp="1579569040042" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1579658044334" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right" timestamp="1579658044335">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="172" key="GridCell.Tab.0.right/0.23.1280.715@0.23.1280.715" timestamp="1579569040043" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1579658044335" />
-    <state width="1249" height="215" key="GridCell.Tab.1.bottom" timestamp="1579569408404">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579569408404" />
-    <state width="1249" height="215" key="GridCell.Tab.1.center" timestamp="1579569408403">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.center/0.23.1280.716@0.23.1280.716" timestamp="1579569408403" />
-    <state width="1249" height="215" key="GridCell.Tab.1.left" timestamp="1579569408403">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.left/0.23.1280.716@0.23.1280.716" timestamp="1579569408403" />
-    <state width="1249" height="215" key="GridCell.Tab.1.right" timestamp="1579569408404">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.right/0.23.1280.716@0.23.1280.716" timestamp="1579569408404" />
-    <state x="136" y="23" width="997" height="715" key="SettingsEditor" timestamp="1579569005411">
+    <state x="259" y="23" key="CommitChangelistDialog2" timestamp="1579783856352">
       <screen x="0" y="23" width="1280" height="715" />
     </state>
+    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1579783856352" />
+    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.716@0.23.1280.716" timestamp="1579749235188" />
+    <state width="1249" height="125" key="GridCell.Tab.0.bottom" timestamp="1579783871733">
+      <screen x="0" y="23" width="1280" height="715" />
+    </state>
+    <state width="1249" height="125" key="GridCell.Tab.0.bottom/0.23.1280.715@0.23.1280.715" timestamp="1579783871733" />
+    <state width="1249" height="125" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579752863615" />
+    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
+    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1579671605586" />
+    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.724@0.23.1280.724" timestamp="1579668534966" />
+    <state width="1249" height="125" key="GridCell.Tab.0.center" timestamp="1579783871732">
+      <screen x="0" y="23" width="1280" height="715" />
+    </state>
+    <state width="1249" height="125" key="GridCell.Tab.0.center/0.23.1280.715@0.23.1280.715" timestamp="1579783871732" />
+    <state width="1249" height="125" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
+    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
+    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
+    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.724@0.23.1280.724" timestamp="1579668534965" />
+    <state width="1249" height="125" key="GridCell.Tab.0.left" timestamp="1579783871731">
+      <screen x="0" y="23" width="1280" height="715" />
+    </state>
+    <state width="1249" height="125" key="GridCell.Tab.0.left/0.23.1280.715@0.23.1280.715" timestamp="1579783871731" />
+    <state width="1249" height="125" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
+    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1579744117215" />
+    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
+    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.724@0.23.1280.724" timestamp="1579668534965" />
+    <state width="1249" height="125" key="GridCell.Tab.0.right" timestamp="1579783871732">
+      <screen x="0" y="23" width="1280" height="715" />
+    </state>
+    <state width="1249" height="125" key="GridCell.Tab.0.right/0.23.1280.715@0.23.1280.715" timestamp="1579783871732" />
+    <state width="1249" height="125" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
+    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
+    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
+    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.724@0.23.1280.724" timestamp="1579668534966" />
+    <state width="1249" height="215" key="GridCell.Tab.1.bottom" timestamp="1579742905863">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579742905863" />
+    <state width="1249" height="215" key="GridCell.Tab.1.center" timestamp="1579742905862">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.center/0.23.1280.716@0.23.1280.716" timestamp="1579742905862" />
+    <state width="1249" height="215" key="GridCell.Tab.1.left" timestamp="1579742905861">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.left/0.23.1280.716@0.23.1280.716" timestamp="1579742905861" />
+    <state width="1249" height="215" key="GridCell.Tab.1.right" timestamp="1579742905862">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="1249" height="215" key="GridCell.Tab.1.right/0.23.1280.716@0.23.1280.716" timestamp="1579742905862" />
+    <state x="136" y="23" width="997" height="721" key="SettingsEditor" timestamp="1579743964752">
+      <screen x="0" y="23" width="1280" height="721" />
+    </state>
     <state x="136" y="23" width="997" height="715" key="SettingsEditor/0.23.1280.715@0.23.1280.715" timestamp="1579569005411" />
-    <state x="312" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1579652636557">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state x="136" y="23" key="SettingsEditor/0.23.1280.716@0.23.1280.716" timestamp="1579678059813" />
+    <state x="136" y="23" width="997" height="721" key="SettingsEditor/0.23.1280.721@0.23.1280.721" timestamp="1579743964752" />
+    <state x="312" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1579782510698">
+      <screen x="0" y="23" width="1280" height="715" />
     </state>
     <state x="312" y="205" key="com.intellij.ide.util.TipDialog/0.23.1280.713@0.23.1280.713" timestamp="1579652636557" />
-    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.715@0.23.1280.715" timestamp="1579568870587" />
+    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.715@0.23.1280.715" timestamp="1579782510698" />
+    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1579739832137" />
+    <state x="300" y="63" width="670" height="676" key="search.everywhere.popup" timestamp="1579659853385">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state x="300" y="63" width="670" height="676" key="search.everywhere.popup/0.23.1280.716@0.23.1280.716" timestamp="1579659853385" />
   </component>
 </project>

@@ -25,7 +25,7 @@ def treeloader(filename):
             value = [-1, 1]
         else:
             # Iris-virginica
-            value = [1, -1]
+            value = [-1, -1]
 
         classe_da_flor.append(value)
 
@@ -37,7 +37,7 @@ treeloader('iris.data')
 
 
 # Número de épocas
-numEpocas = 1
+numEpocas = 65000
 
 # Número de amostras
 numAmostras = len(classe_da_flor)
@@ -60,7 +60,7 @@ Y = np.array(classe_da_flor)
 eta = 0.1
 
 # Array para amazernar os erros.
-e = np.zeros(numAmostras)
+e = np.ones([numAmostras, 2])
 
 # Define a matriz de pesos.
 W = np.ones([2, 5])         # Quatro entradas e o bias !
@@ -73,8 +73,8 @@ def funcaoativacao(valor):
         return 1
 
 
-for j in range(numEpocas):
-    for i in range(2):
+for i in range(2):
+    for j in range(numEpocas):
         for k in range(numAmostras):
             # Insere o bias no vetor de entrada.
             Xb = np.hstack((bias, X[:, k]))
@@ -86,10 +86,11 @@ for j in range(numEpocas):
             Yr = funcaoativacao(V)
 
             # Calcula o erro: e = (Y - Yr)
-            e[k] = Y[k][i] - Yr
+            e[k][i] = Y[k][i] - Yr
 
             # Treinando a rede.
-            W[i] = W[i] + eta * e[k] * Xb
+            W[i] = W[i] + eta * e[k][i] * Xb
+
 
 print("Vetor de errors (e) = " + str(e))
 print("Pesos: ", W)
@@ -98,7 +99,7 @@ print("Decorridos: ", datetime.now() - dtinicial)
 print("")
 acerto = 0
 for i in range(numAmostras):
-    if e[i] == e[i] and e[i] == 0:
+    if e[i][0] == 0 and e[i][0] == e[i][1]:
         acerto = acerto + 1
 
 tx_acerto = (acerto / numAmostras) * 100
