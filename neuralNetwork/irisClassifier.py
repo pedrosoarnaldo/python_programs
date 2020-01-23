@@ -2,6 +2,7 @@ from datetime import datetime
 import numpy as np
 import csv
 
+
 # Parametros das petalas de rosa
 sepala_comprimento = []
 sepala_largura = []
@@ -37,7 +38,7 @@ treeloader('iris.data')
 
 
 # Número de épocas
-numEpocas = 100000
+numEpocas = 2000
 
 # Número de amostras
 numAmostras = len(classe_da_flor)
@@ -67,12 +68,6 @@ e = np.zeros(numAmostras)
 W = np.ones([1, 5])         # Quatro entradas e o bias !
 
 
-def funcaoAtivacao(valor):
-    if valor <= 0.0:
-        return -1
-    else:
-        return 1
-
 for j in range(numEpocas):
     #print("Número de épocas: ", j)
     for k in range(numAmostras):
@@ -81,9 +76,10 @@ for j in range(numEpocas):
 
         # Calcula o vetor campo induzido.
         V = np.dot(W, Xb)
+        #print("V ---->", V)
 
-        # Degrau bipolar
-        Yr = funcaoAtivacao(V)
+        # softmax
+        #Yr = softmax(V, axis=1)
 
         # Calcula o erro: e = (Y - Yr)
         e[k] = Y[k] - Yr
@@ -92,6 +88,7 @@ for j in range(numEpocas):
         W = W + eta * e[k] * Xb
 
 print("Vetor de errors (e) = " + str(e))
-print("Pesos: ", W)
+print("Percentual de Acertos:", float(list(e).count(0.0)/150)*100)
 
+print("Pesos: ", W)
 print("Decorridos: ", datetime.now() - dtinicial)
