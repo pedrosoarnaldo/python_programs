@@ -8,7 +8,7 @@ def validaflor(valor):
         print("Iris-setosa")
     elif valor == [-1, 1]:
         print("Iris-versicolor")
-    elif valor == [1, -1]:
+    elif valor == [-1, -1]:
         print("Iris-virginica")
     else:
         print("Erro")
@@ -39,8 +39,8 @@ print("")
 print("Valor esperado da minha entrada é Iris-Setosa")
 
 ## Utilizado pelo programa irisClassifier.py
-ValidaEntrada1 = funcaoAtivacao(np.dot([100.,   -70.8,   60.4,    3.4,  141.8], [1,4.6,3.1,1.5,0.2]))
-ValidaEntrada2 = funcaoAtivacao(np.dot([1228.,   97.9,  245.4, -341.3, -569.7], [1,4.6,3.1,1.5,0.2]))
+ValidaEntrada1 = funcaoAtivacao(np.dot([0.6,  -1.68, -0.28, -0.84,  0.42], [1, 5.4, 3.9, 1.7, 0.4]))
+ValidaEntrada2 = funcaoAtivacao(np.dot([0.6,  -1.42, -0.2,  -1.22,  0.12], [1, 5.4, 3.9, 1.7, 0.4]))
 print("Encontrado: ")
 validaflor([ValidaEntrada1, ValidaEntrada2])
 
