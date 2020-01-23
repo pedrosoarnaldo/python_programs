@@ -4,7 +4,7 @@ from datetime import datetime
 dtinicial = datetime.now()
 
 # Define o número de épocas da simulação e o número de atributos
-numEpocas = 65000
+numEpocas = 300000
 numAmostras = 6
 
 # Atributos
@@ -12,11 +12,11 @@ peso = np.array([113, 122, 107, 98, 115, 120])
 pH = np.array([6.8, 4.7, 5.2, 3.6, 2.9, 4.2])
 
 # bias
-bias = 1
+bias = 0.5
 
 # Entrada do Perceptron.
 X = np.vstack((peso, pH))  # Ou X = np.asarray([peso, pH])
-Y = np.array([[-1, 1], [1, 1], [-1, 1], [-1, 1], [1, -1], [1, 1]])
+Y = np.array([[-1, 1], [1, 1], [-1, 1], [-1, 1], [1, -1], [-1, -1]])
 
 # Classes
 # +1, +1 = C1
