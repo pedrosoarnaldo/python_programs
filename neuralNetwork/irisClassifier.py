@@ -2,7 +2,6 @@ from datetime import datetime
 import numpy as np
 import csv
 
-
 # Parametros das petalas de rosa
 sepala_comprimento = []
 sepala_largura = []
@@ -21,14 +20,14 @@ def treeloader(filename):
         petala_largura.append(float(c4))
 
         if c5 == "Iris-setosa":
-            value = -1
+            value = [1, 1]
         elif c5 == "Iris-versicolor":
-            value = 0
+            value = [-1, 1]
         else:
-            value = 1
+            # Iris-virginica
+            value = [1, -1]
 
         classe_da_flor.append(value)
-
 
 ### Inicio do programa
 
@@ -38,7 +37,7 @@ treeloader('iris.data')
 
 
 # Número de épocas
-numEpocas = 2000
+numEpocas = 1
 
 # Número de amostras
 numAmostras = len(classe_da_flor)
@@ -57,38 +56,50 @@ X = np.vstack((scomprimento, slargura, pcomprimento, plargura))
 
 # Classificacao
 Y = np.array(classe_da_flor)
-
 # Taxa de aprendizado.
-eta = 0.5
+eta = 0.1
 
 # Array para amazernar os erros.
 e = np.zeros(numAmostras)
 
 # Define a matriz de pesos.
-W = np.ones([1, 5])         # Quatro entradas e o bias !
+W = np.ones([2, 5])         # Quatro entradas e o bias !
+
+
+def funcaoativacao(valor):
+    if valor < 0.0:
+        return -1
+    else:
+        return 1
 
 
 for j in range(numEpocas):
-    #print("Número de épocas: ", j)
-    for k in range(numAmostras):
-        # Insere o bias no vetor de entrada.
-        Xb = np.hstack((bias, X[:, k]))
+    for i in range(2):
+        for k in range(numAmostras):
+            # Insere o bias no vetor de entrada.
+            Xb = np.hstack((bias, X[:, k]))
 
-        # Calcula o vetor campo induzido.
-        V = np.dot(W, Xb)
-        #print("V ---->", V)
+            # Calcula o vetor campo induzido.
+            V = np.dot(W[i], Xb)
 
-        # softmax
-        #Yr = softmax(V, axis=1)
+            # Degrau bipolar
+            Yr = funcaoativacao(V)
 
-        # Calcula o erro: e = (Y - Yr)
-        e[k] = Y[k] - Yr
+            # Calcula o erro: e = (Y - Yr)
+            e[k] = Y[k][i] - Yr
 
-        # Treinando a rede.
-        W = W + eta * e[k] * Xb
+            # Treinando a rede.
+            W[i] = W[i] + eta * e[k] * Xb
 
 print("Vetor de errors (e) = " + str(e))
-print("Percentual de Acertos:", float(list(e).count(0.0)/150)*100)
-
 print("Pesos: ", W)
 print("Decorridos: ", datetime.now() - dtinicial)
+
+print("")
+acerto = 0
+for i in range(numAmostras):
+    if e[i] == e[i] and e[i] == 0:
+        acerto = acerto + 1
+
+tx_acerto = (acerto / numAmostras) * 100
+print ("Taxa de acerto ", tx_acerto)
