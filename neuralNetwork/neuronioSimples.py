@@ -84,4 +84,4 @@ for i in range(numAmostras):
         acerto = acerto + 1
 
 tx_acerto = (acerto / numAmostras) * 100
-print ("Taixa de acerto ", tx_acerto)
+print ("Taxa de acerto ", tx_acerto)
