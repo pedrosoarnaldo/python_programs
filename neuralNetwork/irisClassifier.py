@@ -37,7 +37,7 @@ treeloader('iris.data')
 
 
 # Número de épocas
-numEpocas = 65000
+numEpocas = 1000000
 
 # Número de amostras
 numAmostras = len(classe_da_flor)
