@@ -1,14 +1,14 @@
 import numpy as np
 
-class classifier():
+
+class neuronClassifier:
     """"Class based on neural network to classify data"""
 
-    def __init__(self):
-        self.X = np.ones(1),
-        self.eta = 0.1          # learning rate
+    def __init__(self) -> object:
+        self.x = np.ones(1),
+        self.eta = 0.1  # learning rate
         self.parameters = ([113, 122, 107, 98, 115, 120], [6.8, 4.7, 5.2, 3.6, 2.9, 4.2])
         self.results = [-1, 1, -1, -1, 1, 1]
-
 
     @staticmethod
     def activation_function(value):
@@ -19,20 +19,18 @@ class classifier():
 
     @staticmethod
     def error_rate(e):
-        k = 0
+        k = 0.0
         count = len([i for i in e if i > k])
-        return int(count / e)
-
+        return float(count / len(e))
 
     @staticmethod
-    def neuron(self, bias, parameters, results, eta):
-        self.number_of_parameters = 0
-        for i in parameters:
-            self.X = np.dot(self.X, i)
-            number_of_parameters = number_of_parameters + 1
+    def neuron(bias, parameters, results, eta):
+        number_of_parameters = 0
+        x = np.vstack([i for i in parameters])
+        number_of_parameters = len(parameters)
 
         # neuron weight
-        w = np.ones([1, self.number_of_parameters+1])
+        w = np.ones([1, number_of_parameters + 1])
 
         # number of samples
         number_of_samples = len(parameters[0])
@@ -52,23 +50,21 @@ class classifier():
             epoch = epoch + 1
             for k in range(number_of_samples):
 
-                # Insert bias
-                xb = np.hstack((bias, self.X[:, k]))
+                # Insere o bias no vetor de entrada.
+                xb = np.hstack((bias, x[:, k]))
 
                 # Calcula o vetor campo induzido.
                 v = np.dot(w, xb)
 
                 # Degrau bipolar
-                yr = self.activation_function(v)
+                yr = neuronClassifier.activation_function(v)
 
                 # Calcula o erro: e = (Y - Yr)
                 e[k] = y[k] - yr
 
                 # Treinando a rede.
-                w = w + self.eta * e[k] * xb
+                w = w + eta * e[k] * xb
 
-                if epoch == 65000:
-                #if self.error_rate(e) == 1:
+                if epoch >= 65000:
                     condition = 0
-
-        return [epoch, self.w]
+        return [epoch, w, e]
