@@ -18,13 +18,13 @@ class neuronClassifier:
             return 1
 
     @staticmethod
-    def error_rate(e):
+    def hit_rate(e):
         k = 0.0
-        count = len([i for i in e if i > k])
+        count = len([i for i in e if i == k])
         return float(count / len(e))
 
     @staticmethod
-    def neuron(bias, parameters, results, eta):
+    def neuron(bias, parameters, results, eta, hit):
         number_of_parameters = 0
         x = np.vstack([i for i in parameters])
         number_of_parameters = len(parameters)
@@ -65,6 +65,9 @@ class neuronClassifier:
                 # Treinando a rede.
                 w = w + eta * e[k] * xb
 
-                if epoch >= 30000:
-                    condition = 0
+                tx_hit = neuronClassifier.hit_rate(e)
+
+            if tx_hit >= hit:
+                condition = 0
+
         return [epoch, w, e]
