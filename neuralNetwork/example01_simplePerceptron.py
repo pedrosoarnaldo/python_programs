@@ -28,7 +28,6 @@ bias = 1
 
 # Entrada do Perceptron.
 X = np.vstack((peso, pH))  # Ou X = np.asarray([peso, pH])
-print("X ----->", X)
 Y = np.array([-1, 1, -1, -1, 1, 1])
 
 # Taxa de aprendizado.
@@ -42,7 +41,7 @@ W = np.ones([1, 3])  # Duas entradas e o bias !
 
 
 def funcaoAtivacao(valor):
-    if valor <= 0.0:
+    if valor < 0.0:
         return -1
     else:
         return 1
@@ -75,10 +74,11 @@ for j in range(numEpocas):
         # Treinando a rede.
         W = W + eta * e[k] * Xb
 
+print(f"Peso {W}")
 print("Vetor de errors (e) = " + str(e))
 
 print("Minha entrada de dados tem que ser : -1")
-ValidaEntrada = np.dot([-2420.4, 116.6, -2502.09999999], [1, 122, 6.8])
+ValidaEntrada = np.dot([-2420.4, 116.6, -2502.09999999], [1, 113, 6.8])
 
 print("O valor estimado pela rede foi: ", funcaoAtivacao(ValidaEntrada))
 print("Decorridos: ", datetime.now() - dtinicial)
