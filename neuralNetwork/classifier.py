@@ -67,7 +67,8 @@ class classifier():
                 # Treinando a rede.
                 w = w + self.eta * e[k] * xb
 
-                if self.error_rate(e) == 1:
+                if epoch == 65000:
+                #if self.error_rate(e) == 1:
                     condition = 0
 
         return [epoch, self.w]
