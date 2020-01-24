@@ -28,6 +28,7 @@ bias = 1
 
 # Entrada do Perceptron.
 X = np.vstack((peso, pH))  # Ou X = np.asarray([peso, pH])
+print("X ----->", X)
 Y = np.array([-1, 1, -1, -1, 1, 1])
 
 # Taxa de aprendizado.
