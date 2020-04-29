@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as pl
 import seaborn as sns
 
-movies = pd.read_csv("/Users/arnaldo.pedroso/PycharmProjects/introducao-a-data-science/aula0/ml-latest-small/movies.csv")
+movies = pd.read_csv("/Users/arnaldo.pedroso/PycharmProjects/python_programs/AluraDataScience/introducao-a-data-science/aula0/ml-latest-small/movies.csv")
 
 genres = movies["genres"].str.get_dummies("|").sum().sort_values(ascending=False)
 
