@@ -19,7 +19,7 @@ def count_frequency(my_list):
     return data
 
 
-movies = pd.read_csv('/Users/arnaldo.pedroso/PycharmProjects/introducao-a-data-science/aula0/ml-latest-small/movies.csv')
+movies = pd.read_csv('/Users/arnaldo.pedroso/PycharmProjects/python_programs/AluraDataScience/introducao-a-data-science/aula0/ml-latest-small/movies.csv')
 
 '''Descobrindo Generos Unicos'''
 genres = []
