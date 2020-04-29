@@ -1,8 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-vRatings = pd.read_csv('/Users/arnaldo.pedroso/PycharmProjects/introducao-a-data-science/aula0/ml-latest-small/ratings.csv')
-vMovies = pd.read_csv('/Users/arnaldo.pedroso/PycharmProjects/introducao-a-data-science/aula0/ml-latest-small/movies.csv')
+vRatings = pd.read_csv('/Users/arnaldo.pedroso/PycharmProjects/python_programs/AluraDataScience/introducao-a-data-science/aula0/ml-latest-small/ratings.csv')
+vMovies = pd.read_csv('/Users/arnaldo.pedroso/PycharmProjects/python_programs/AluraDataScience/introducao-a-data-science/aula0/ml-latest-small/movies.csv')
 
 print("Shape do vRatings")
 print(vRatings.shape)
