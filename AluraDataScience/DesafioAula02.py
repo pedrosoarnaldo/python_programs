@@ -17,19 +17,17 @@ rantings = pd.read_csv(
 top_10_movies_by_rating = rantings.groupby("movieId").count()["rating"].sort_values(ascending=False).head(10)
 total_ratings_for_top_10_movies = rantings.join(top_10_movies_by_rating, on="movieId", lsuffix="_r", rsuffix="_t", how="inner")
 
-#print(total_ratings_for_top_10_movies.keys())
+x = movies.merge(total_ratings_for_top_10_movies, on="movieId")
 
 sb.boxplot(
-    data=total_ratings_for_top_10_movies,
-    x=total_ratings_for_top_10_movies["movieId"],
-    y=total_ratings_for_top_10_movies["rating_r"]
+    data=x,
+    y=x["title"],
+    x=x["rating_r"],
+    orient="h",
 )
 
 plt.show()
 
 
-filme = total_ratings_for_top_10_movies.query("movieId==593").describe()
-print(filme)
-
-
+#Criar um gráfico de notas médias por ano (média geral considerando todos os filmes lançados naquele ano).
 
