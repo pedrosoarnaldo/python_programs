@@ -59,3 +59,7 @@ print(np.median(ratings["rating"]))
 print("")
 print(ratings["rating"].describe())
 
+print("")
+print("Quantidade por Adventure")
+print(movies[movies.genres == "Adventure"].count())
+
