@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Inventory" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="">
+    <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="simple perceptron example">
+      <change afterPath="$PROJECT_DIR$/Games/Pong.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neuralNetwork/classtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/classtest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +64,11 @@
   <component name="ProjectId" id="1TJScuiou4bHopAiGm85rXxE2cr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -38,8 +79,8 @@
       <recent name="$PROJECT_DIR$/neuralNetwork" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.irisClassifier">
-    <configuration name="_pydev_execfile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Pong">
+    <configuration name="Poem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -47,11 +88,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_imps" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Poem" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Poem/Poem.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -60,7 +101,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="example01_simplePerceptron" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Pong" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_programs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Games" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Games/Pong.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +134,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/example01_simplePerceptron.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/classifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -81,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="irisClassifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="classtest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,28 +155,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="neuronioJaTreinado" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python_programs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/neuronioJaTreinado.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/classtest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,26 +187,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.irisClassifier" />
-        <item itemvalue="Python.neuronioJaTreinado" />
+        <item itemvalue="Python.Pong" />
+        <item itemvalue="Python.Poem" />
         <item itemvalue="Python.neuronioSimples" />
-        <item itemvalue="Python.example01_simplePerceptron" />
-        <item itemvalue="Python._pydev_execfile" />
+        <item itemvalue="Python.classtest" />
+        <item itemvalue="Python.classifier" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -303,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579783395152</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="simple perceptron example">
+      <created>1605748933625</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1605748933625</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,13 +348,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created a config file to key in azure." />
@@ -325,78 +361,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="simple perceptron example" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="259" y="23" key="CommitChangelistDialog2" timestamp="1579783856352">
-      <screen x="0" y="23" width="1280" height="715" />
+    <state width="1271" height="215" key="GridCell.Tab.0.bottom" timestamp="1605757495051">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1579783856352" />
-    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.716@0.23.1280.716" timestamp="1579749235188" />
-    <state width="1249" height="199" key="GridCell.Tab.0.bottom" timestamp="1579965776412">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1271" height="215" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
+    <state width="1271" height="215" key="GridCell.Tab.0.center" timestamp="1605757495051">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.bottom/0.23.1280.713@0.23.1280.713" timestamp="1579965776412" />
-    <state width="1249" height="125" key="GridCell.Tab.0.bottom/0.23.1280.715@0.23.1280.715" timestamp="1579783871733" />
-    <state width="1249" height="125" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579752863615" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1579671605586" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.724@0.23.1280.724" timestamp="1579668534966" />
-    <state width="1249" height="199" key="GridCell.Tab.0.center" timestamp="1579965776411">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1271" height="215" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
+    <state width="1271" height="215" key="GridCell.Tab.0.left" timestamp="1605757495051">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.center/0.23.1280.713@0.23.1280.713" timestamp="1579965776411" />
-    <state width="1249" height="125" key="GridCell.Tab.0.center/0.23.1280.715@0.23.1280.715" timestamp="1579783871732" />
-    <state width="1249" height="125" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.724@0.23.1280.724" timestamp="1579668534965" />
-    <state width="1249" height="199" key="GridCell.Tab.0.left" timestamp="1579965776410">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1271" height="215" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
+    <state width="1271" height="215" key="GridCell.Tab.0.right" timestamp="1605757495051">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.left/0.23.1280.713@0.23.1280.713" timestamp="1579965776410" />
-    <state width="1249" height="125" key="GridCell.Tab.0.left/0.23.1280.715@0.23.1280.715" timestamp="1579783871731" />
-    <state width="1249" height="125" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1579744117215" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.724@0.23.1280.724" timestamp="1579668534965" />
-    <state width="1249" height="199" key="GridCell.Tab.0.right" timestamp="1579965776411">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1271" height="215" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
+    <state width="1271" height="215" key="GridCell.Tab.1.bottom" timestamp="1605757495052">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.right/0.23.1280.713@0.23.1280.713" timestamp="1579965776411" />
-    <state width="1249" height="125" key="GridCell.Tab.0.right/0.23.1280.715@0.23.1280.715" timestamp="1579783871732" />
-    <state width="1249" height="125" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.724@0.23.1280.724" timestamp="1579668534966" />
-    <state width="1249" height="215" key="GridCell.Tab.1.bottom" timestamp="1579742905863">
-      <screen x="0" y="23" width="1280" height="716" />
+    <state width="1271" height="215" key="GridCell.Tab.1.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605757495052" />
+    <state width="1271" height="215" key="GridCell.Tab.1.center" timestamp="1605757495052">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579742905863" />
-    <state width="1249" height="215" key="GridCell.Tab.1.center" timestamp="1579742905862">
-      <screen x="0" y="23" width="1280" height="716" />
+    <state width="1271" height="215" key="GridCell.Tab.1.center/72.27.1294.741@72.27.1294.741" timestamp="1605757495052" />
+    <state width="1271" height="215" key="GridCell.Tab.1.left" timestamp="1605757495052">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.center/0.23.1280.716@0.23.1280.716" timestamp="1579742905862" />
-    <state width="1249" height="215" key="GridCell.Tab.1.left" timestamp="1579742905861">
-      <screen x="0" y="23" width="1280" height="716" />
+    <state width="1271" height="215" key="GridCell.Tab.1.left/72.27.1294.741@72.27.1294.741" timestamp="1605757495052" />
+    <state width="1271" height="215" key="GridCell.Tab.1.right" timestamp="1605757495052">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.left/0.23.1280.716@0.23.1280.716" timestamp="1579742905861" />
-    <state width="1249" height="215" key="GridCell.Tab.1.right" timestamp="1579742905862">
-      <screen x="0" y="23" width="1280" height="716" />
+    <state width="1271" height="215" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495052" />
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1605749695383">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.right/0.23.1280.716@0.23.1280.716" timestamp="1579742905862" />
-    <state x="136" y="23" width="997" height="721" key="SettingsEditor" timestamp="1579743964752">
-      <screen x="0" y="23" width="1280" height="721" />
-    </state>
-    <state x="136" y="23" width="997" height="715" key="SettingsEditor/0.23.1280.715@0.23.1280.715" timestamp="1579569005411" />
-    <state x="136" y="23" key="SettingsEditor/0.23.1280.716@0.23.1280.716" timestamp="1579678059813" />
-    <state x="136" y="23" width="997" height="721" key="SettingsEditor/0.23.1280.721@0.23.1280.721" timestamp="1579743964752" />
-    <state x="312" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1579782510698">
-      <screen x="0" y="23" width="1280" height="715" />
-    </state>
-    <state x="312" y="205" key="com.intellij.ide.util.TipDialog/0.23.1280.713@0.23.1280.713" timestamp="1579652636557" />
-    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.715@0.23.1280.715" timestamp="1579782510698" />
-    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1579739832137" />
-    <state x="300" y="63" width="670" height="676" key="search.everywhere.popup" timestamp="1579659853385">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state x="300" y="63" width="670" height="676" key="search.everywhere.popup/0.23.1280.716@0.23.1280.716" timestamp="1579659853385" />
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1605749695383" />
   </component>
 </project>
