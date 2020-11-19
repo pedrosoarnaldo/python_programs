@@ -35,21 +35,16 @@ clf = clf.fit(lf, lc)
 p = PoemClassifier
 
 verso = [
-"De tanto ver lavar a sobrinha"
-"pequenininha em grande bacia,",
-"quis imitar o banho da Mirinha,",
-"que a mão batia n'água e sorria.",
-"A Vovó Ana, então, na carinha,",
-"passava a mão, sabão... sorria,",
-"achava em tudo uma gracinha...",
-"toalha, fralda e logo trazia",
-"minha boneca para tomar",
-"banho também, porém, no verão,",
-"outro boneco, eu quis ganhar...",
-"bem leve e grande... mas desmanchou",
-"porque era feito com papelão",
-"pus-me a chorar, meu sonho acabou!"
-    ]
+"O Amor é fogo que arde sem se ver"
+"É ferida que doí e não se sente",
+"É um contentamento descontente,",
+"É dor que desatina sem doer.",
+"É um não querer mais que bem querer",
+"É o solitário andar por entre a gente",
+"Mas como causar pode o seu favor",
+"nos corações humanos amizade,",
+"Se tão contrário a si é o mesmo amor"
+]
 
 ld = []
 
