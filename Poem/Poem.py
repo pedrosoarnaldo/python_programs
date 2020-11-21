@@ -43,7 +43,10 @@ verso = [
 "É o solitário andar por entre a gente",
 "Mas como causar pode o seu favor",
 "nos corações humanos amizade,",
-"Se tão contrário a si é o mesmo amor"
+"Se tão contrário a si é o mesmo amor",
+"Batatinha quando nasce espalha rama pelo chão",
+"menininha quando dorme põe a mão no coração",
+"Que conhece o que é verdade"
 ]
 
 ld = []

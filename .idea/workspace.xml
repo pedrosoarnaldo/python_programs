@@ -41,9 +41,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="simple perceptron example">
-      <change afterPath="$PROJECT_DIR$/Games/Pong.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neuralNetwork/classtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/classtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poem/Poem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Poem/Poem.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <recent name="$PROJECT_DIR$/neuralNetwork" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Pong">
+  <component name="RunManager" selected="Python.neuronioSimples">
     <configuration name="Poem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,9 +186,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Pong" />
-        <item itemvalue="Python.Poem" />
         <item itemvalue="Python.neuronioSimples" />
+        <item itemvalue="Python.Poem" />
+        <item itemvalue="Python.Pong" />
         <item itemvalue="Python.classtest" />
         <item itemvalue="Python.classifier" />
       </list>
@@ -361,21 +360,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="simple perceptron example" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1271" height="215" key="GridCell.Tab.0.bottom" timestamp="1605757495051">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1409" height="198" key="GridCell.Tab.0.bottom" timestamp="1605925099215">
+      <screen x="0" y="25" width="1440" height="796" />
     </state>
+    <state width="1409" height="198" key="GridCell.Tab.0.bottom/0.25.1440.796@0.25.1440.796" timestamp="1605925099215" />
     <state width="1271" height="215" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
-    <state width="1271" height="215" key="GridCell.Tab.0.center" timestamp="1605757495051">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1409" height="198" key="GridCell.Tab.0.center" timestamp="1605925099214">
+      <screen x="0" y="25" width="1440" height="796" />
     </state>
+    <state width="1409" height="198" key="GridCell.Tab.0.center/0.25.1440.796@0.25.1440.796" timestamp="1605925099214" />
     <state width="1271" height="215" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
-    <state width="1271" height="215" key="GridCell.Tab.0.left" timestamp="1605757495051">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1409" height="198" key="GridCell.Tab.0.left" timestamp="1605925099214">
+      <screen x="0" y="25" width="1440" height="796" />
     </state>
+    <state width="1409" height="198" key="GridCell.Tab.0.left/0.25.1440.796@0.25.1440.796" timestamp="1605925099214" />
     <state width="1271" height="215" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
-    <state width="1271" height="215" key="GridCell.Tab.0.right" timestamp="1605757495051">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state width="1409" height="198" key="GridCell.Tab.0.right" timestamp="1605925099214">
+      <screen x="0" y="25" width="1440" height="796" />
     </state>
+    <state width="1409" height="198" key="GridCell.Tab.0.right/0.25.1440.796@0.25.1440.796" timestamp="1605925099214" />
     <state width="1271" height="215" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
     <state width="1271" height="215" key="GridCell.Tab.1.bottom" timestamp="1605757495052">
       <screen x="72" y="27" width="1294" height="741" />
@@ -393,9 +396,11 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1271" height="215" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495052" />
-    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1605749695383">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state x="151" y="29" width="1022" height="737" key="SettingsEditor" timestamp="1605924475683">
+      <screen x="0" y="25" width="1440" height="796" />
     </state>
+    <state x="151" y="29" key="SettingsEditor/0.25.1440.794@0.25.1440.794" timestamp="1605924129394" />
+    <state x="151" y="29" key="SettingsEditor/0.25.1440.796@0.25.1440.796" timestamp="1605924475683" />
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1605749695383" />
   </component>
 </project>
