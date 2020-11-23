@@ -41,9 +41,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="simple perceptron example">
-      <change afterPath="$PROJECT_DIR$/Games/Pong.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neuralNetwork/classtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/classtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Pong.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Pong.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PedidosPorMinuto/SalesOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/PedidosPorMinuto/SalesOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neuralNetwork/neuronioSimples.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/neuronioSimples.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +81,8 @@
       <recent name="$PROJECT_DIR$/neuralNetwork" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Pong">
-    <configuration name="Poem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.neuronioSimples">
+    <configuration name="OrdersPerMinute (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,11 +90,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Poem" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Poem/Poem.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto/OrdersPerMinute.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,7 +103,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Pong" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="OrdersPerMinute" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -109,11 +111,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Games" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto_local" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Games/Pong.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto_local/OrdersPerMinute.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SalesOrder (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -130,11 +132,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/classifier.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto/SalesOrder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,7 +145,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="classtest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SalesOrder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -151,11 +153,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto_local" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/classtest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto_local/SalesOrder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Pong" />
-        <item itemvalue="Python.Poem" />
         <item itemvalue="Python.neuronioSimples" />
-        <item itemvalue="Python.classtest" />
-        <item itemvalue="Python.classifier" />
+        <item itemvalue="Python.OrdersPerMinute (1)" />
+        <item itemvalue="Python.SalesOrder (1)" />
+        <item itemvalue="Python.OrdersPerMinute" />
+        <item itemvalue="Python.SalesOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -361,22 +363,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="simple perceptron example" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1271" height="215" key="GridCell.Tab.0.bottom" timestamp="1605757495051">
+    <state width="1271" height="172" key="GridCell.Tab.0.bottom" timestamp="1605997658259">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="215" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
-    <state width="1271" height="215" key="GridCell.Tab.0.center" timestamp="1605757495051">
+    <state width="1271" height="172" key="GridCell.Tab.0.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441231" />
+    <state width="1271" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
+    <state width="1271" height="172" key="GridCell.Tab.0.center" timestamp="1605997658259">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="215" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
-    <state width="1271" height="215" key="GridCell.Tab.0.left" timestamp="1605757495051">
+    <state width="1271" height="172" key="GridCell.Tab.0.center/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441230" />
+    <state width="1271" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
+    <state width="1271" height="172" key="GridCell.Tab.0.left" timestamp="1605997658259">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="215" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
-    <state width="1271" height="215" key="GridCell.Tab.0.right" timestamp="1605757495051">
+    <state width="1271" height="172" key="GridCell.Tab.0.left/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441229" />
+    <state width="1271" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
+    <state width="1271" height="172" key="GridCell.Tab.0.right" timestamp="1605997658259">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="215" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
+    <state width="1271" height="172" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441230" />
+    <state width="1271" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
     <state width="1271" height="215" key="GridCell.Tab.1.bottom" timestamp="1605757495052">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -393,9 +399,9 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1271" height="215" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495052" />
-    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1605749695383">
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1605900096131">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1605749695383" />
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1605900096131" />
   </component>
 </project>
