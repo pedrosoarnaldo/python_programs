@@ -1,5 +1,4 @@
 import pyodbc
-import json
 import flask
 
 class SalesOrder:
@@ -10,36 +9,53 @@ class SalesOrder:
         app.config["DEBUG"] = True
 
         @app.route('/', methods=['GET'])
+        def homepage():
+            return """<h1>OK</h1>"""
+
+        @app.route('/pedidos', methods=['POST'])
         def home():
-            json_object_return = self.get_order()
-            return json_object_return
+            cmd = ""
+            minutes = flask.request.form.get('text')
+
+            try:
+                return_query = self.get_order(minutes)
+            except:
+                return_query = self.get_order('1')
+
+            for key in return_query:
+                cmd = cmd + key + " -> " + str(return_query[key]) + "\n"
+
+            cmd = cmd + "\n Bom final de semana brother!\n"
+            return cmd
 
         app.run(host = '0.0.0.0')
 
-    def get_order(self):
+    def get_order(self, minutes):
 
-            amount_orders = {}
-            # Some other example server values are
-            # server = 'localhost\sqlexpress' # for a named instance
-            # server = 'myserver,port' # to specify an alternate port
+        if int(minutes) >= 60:
+            minutes = 60
 
-            server = 'xxxxx..dc.sbnet\xxxx,1433'
-            database = 'database_name'
-            username = 'user'
-            password = 'password'
+        amount_orders = {}
+        # Some other example server values are
+        # server = 'localhost\sqlexpress' # for a named instance
+        # server = 'myserver,port' # to specify an alternate port
 
-            cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
-            cursor = cnxn.cursor()
-            cmd = "SELECT distinct (COUNT(p.Id)/10) AS AVG_10_M,(SELECT distinct COUNT(p.Id) AS AVG_10_M FROM database_name.dbo.orders p (NOLOCK) WHERE p.CriadoEm >= DATEADD(minute,-1,GETDATE()) and p.CriadoEm < GETDATE()) AS last_minute FROM database_name.dbo.orders p (NOLOCK) WHERE p.CriadoEm >= DATEADD(minute,-11,GETDATE()) AND p.CriadoEm < DATEADD(minute,-2,GETDATE())"
+        server   = 'server.dc.intra\INSTANCE_NAME,1433'
+        database = 'Database_Name'
+        username = 'user'
+        password = 'password'
 
-            #Sample select query
-            cursor.execute(cmd)
+
+        cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+        cursor = cnxn.cursor()
+        cmd = "SELECT convert(varchar(5), p.CriadoEm, 108), count(p.Id) FROM database_name.dbo.Tabela p (NOLOCK) WHERE p.CriadoEm >= DATEADD(minute,-" + minutes + ",GETDATE()) and p.CriadoEm < GETDATE() group by convert(varchar(5), p.CriadoEm, 108) order by 1"
+        print(cmd)
+        #Sample select query
+        cursor.execute(cmd)
+        row = cursor.fetchone()
+
+        while row:
+            amount_orders[row[0]] = row[1]
             row = cursor.fetchone()
 
-            while row:
-                amount_orders['last_10m'] = row[0]
-                amount_orders['last_1m'] = row[1]
-                row = cursor.fetchone()
-
-            json_object = json.dumps(amount_orders, indent=4)
-            return json_object
+        return amount_orders

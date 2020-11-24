@@ -40,7 +40,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="simple perceptron example">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Pong.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Pong.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PedidosPorMinuto/SalesOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/PedidosPorMinuto/SalesOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neuralNetwork/neuronioSimples.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/neuronioSimples.py" afterDir="false" />
+    </list>
+=======
     <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="simple perceptron example" />
+>>>>>>> 5d47fe3a712ad5e6ac8b3651076012c26f05bb92
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,8 +85,8 @@
       <recent name="$PROJECT_DIR$/neuralNetwork" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Pong">
-    <configuration name="Poem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.neuronioSimples">
+    <configuration name="OrdersPerMinute (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,11 +94,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Poem" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Poem/Poem.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto/OrdersPerMinute.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,7 +107,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Pong" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="OrdersPerMinute" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +115,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Games" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto_local" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Games/Pong.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto_local/OrdersPerMinute.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SalesOrder (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,11 +136,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/classifier.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto/SalesOrder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="classtest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SalesOrder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,11 +157,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PedidosPorMinuto_local" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/classtest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PedidosPorMinuto_local/SalesOrder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,11 +193,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+        <item itemvalue="Python.neuronioSimples" />
+        <item itemvalue="Python.OrdersPerMinute (1)" />
+        <item itemvalue="Python.SalesOrder (1)" />
+        <item itemvalue="Python.OrdersPerMinute" />
+        <item itemvalue="Python.SalesOrder" />
+=======
         <item itemvalue="Python.Pong" />
         <item itemvalue="Python.neuronioSimples" />
         <item itemvalue="Python.Poem" />
         <item itemvalue="Python.classtest" />
         <item itemvalue="Python.classifier" />
+>>>>>>> 5d47fe3a712ad5e6ac8b3651076012c26f05bb92
       </list>
     </recent_temporary>
   </component>
@@ -357,8 +375,35 @@
     <option name="LAST_COMMIT_MESSAGE" value="simple perceptron example" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state width="1409" height="198" key="GridCell.Tab.0.bottom" timestamp="1606018236362">
       <screen x="0" y="25" width="1440" height="794" />
+=======
+<<<<<<< HEAD
+    <state width="1271" height="172" key="GridCell.Tab.0.bottom" timestamp="1605997658259">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="172" key="GridCell.Tab.0.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441231" />
+    <state width="1271" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
+    <state width="1271" height="172" key="GridCell.Tab.0.center" timestamp="1605997658259">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="172" key="GridCell.Tab.0.center/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441230" />
+    <state width="1271" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
+    <state width="1271" height="172" key="GridCell.Tab.0.left" timestamp="1605997658259">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="172" key="GridCell.Tab.0.left/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441229" />
+    <state width="1271" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
+    <state width="1271" height="172" key="GridCell.Tab.0.right" timestamp="1605997658259">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="172" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1605896441230" />
+    <state width="1271" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605997658259" />
+=======
+    <state width="1409" height="198" key="GridCell.Tab.0.bottom" timestamp="1605925099215">
+      <screen x="0" y="25" width="1440" height="796" />
+>>>>>>> 068c302c6de41046c2e88563d37f4756509be4d6
     </state>
     <state width="1409" height="198" key="GridCell.Tab.0.bottom/0.25.1440.794@0.25.1440.794" timestamp="1606018236362" />
     <state width="1409" height="198" key="GridCell.Tab.0.bottom/0.25.1440.796@0.25.1440.796" timestamp="1605925099215" />
@@ -381,6 +426,7 @@
     <state width="1409" height="198" key="GridCell.Tab.0.right/0.25.1440.794@0.25.1440.794" timestamp="1606018236362" />
     <state width="1409" height="198" key="GridCell.Tab.0.right/0.25.1440.796@0.25.1440.796" timestamp="1605925099214" />
     <state width="1271" height="215" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495051" />
+>>>>>>> 5d47fe3a712ad5e6ac8b3651076012c26f05bb92
     <state width="1271" height="215" key="GridCell.Tab.1.bottom" timestamp="1605757495052">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -397,11 +443,18 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="1271" height="215" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1605757495052" />
+<<<<<<< HEAD
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1605900096131">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1605900096131" />
+=======
     <state x="151" y="29" width="1022" height="737" key="SettingsEditor" timestamp="1605924475683">
       <screen x="0" y="25" width="1440" height="796" />
     </state>
     <state x="151" y="29" key="SettingsEditor/0.25.1440.794@0.25.1440.794" timestamp="1605924129394" />
     <state x="151" y="29" key="SettingsEditor/0.25.1440.796@0.25.1440.796" timestamp="1605924475683" />
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1605749695383" />
+>>>>>>> 5d47fe3a712ad5e6ac8b3651076012c26f05bb92
   </component>
 </project>

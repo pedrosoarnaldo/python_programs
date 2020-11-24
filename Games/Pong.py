@@ -94,7 +94,6 @@ while True:
         ball.dy *= -1    ### change the direction
         os.system("aplay pong.wav&")
 
-
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1  ### change the direction
