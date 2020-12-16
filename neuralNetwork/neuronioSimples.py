@@ -4,11 +4,7 @@ from datetime import datetime
 dtinicial = datetime.now()
 
 # Define o número de épocas da simulação e o número de atributos
-<<<<<<< HEAD
-numEpocas = 2000000
-=======
 numEpocas = 750000
->>>>>>> 5d47fe3a712ad5e6ac8b3651076012c26f05bb92
 numAmostras = 6
 
 # Atributos
