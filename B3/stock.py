@@ -2,6 +2,7 @@ import pandas as pd
 from pandas_datareader import data, wb
 import datetime
 import re
+import os
 
 
 class Stock:
@@ -36,6 +37,7 @@ class Stock:
                   'close': str(line).split()[5]
                 })
 
+        os.remove('sample.tmp')
         return coll
 
     def groupdata(self, datacollection, piece):
