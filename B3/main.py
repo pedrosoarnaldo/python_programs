@@ -1,4 +1,5 @@
 from stock import Stock
+import DatabasePool
 
 
 md = [
@@ -99,7 +100,13 @@ def listdata(c, symbol, finance, start, end, pieces):
     print(groupby)
 
 
-for year in range(2000, 2021):
+try:
+    mongo = DatabasePool.DatabasePool()
+    dbc = mongo.connect_mongo()
+except:
+    print('Error connecting to mongodb')
+
+for year in range(2021, 2021):
     for lst in md:
         for month in lst.items():
             start = str(year) + "-" + month[0] + "-" + '01'
@@ -107,3 +114,4 @@ for year in range(2000, 2021):
             print(start + " " + end)
             analyzestock(None, start, end, 1)
 
+dbc.close()
