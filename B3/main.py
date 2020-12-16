@@ -1,5 +1,22 @@
 from stock import Stock
 
+
+md = [
+    {'01': '31'},
+    {'02': '28'},
+    {'03': '31'},
+    {'04': '30'},
+    {'05': '31'},
+    {'06': '30'},
+    {'07': '31'},
+    {'08': '31'},
+    {'09': '30'},
+    {'10': '31'},
+    {'11': '30'},
+    {'12': '31'}
+]
+
+
 def analyzestock(stock, start, end, pieces):
     x = []
     y = []
@@ -88,5 +105,11 @@ def listdata(c, symbol, finance, start, end, pieces):
     print(groupby)
 
 
-analyzestock(None, '2020-01-01', '2020-02-28', 4)
+for year in range(2000, 2021):
+    for lst in md:
+        for month in lst.items():
+            start = str(year) + "-" + month[0] + "-" + '01'
+            end = str(year) + "-" + month[0] + "-" + month[1]
+            print(start + " " + end)
+            analyzestock(None, start, end, 1)
 
