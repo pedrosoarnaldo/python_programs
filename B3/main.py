@@ -60,12 +60,6 @@ def analyzestock(stock, start, end, pieces):
                 'GMT': '+1'
             },
             {
-                'symbol': '^FTSE',
-                'name': 'FTSE 100',
-                'country': 'ING',
-                'GMT': '+0'
-            },
-            {
                 'symbol': '^GSPTSE',
                 'name': 'Toronto Stock S&P/TSX Composite',
                 'country': 'CAN',
