@@ -1,5 +1,6 @@
 from stock import Stock
 import DatabasePool
+from datetime import datetime
 
 
 md = [
@@ -18,7 +19,7 @@ md = [
 ]
 
 
-def analyzestock(stock, start, end, pieces):
+def analyzestock(stock, start, end, pieces, mydb):
     x = []
     y = []
 
@@ -83,35 +84,46 @@ def analyzestock(stock, start, end, pieces):
         for symbol in stocks:
             print(symbol['name'])
             try:
-                listdata(Stock(), symbol['symbol'], 'yahoo', start, end, pieces)
+                listdata(Stock(), symbol['symbol'], 'yahoo', start, end, pieces, mydb)
             except:
                 print('Error obtaning ' + symbol['symbol'] + ' information')
     else:
         try:
-            listdata(Stock(), stock, 'yahoo', start, end, pieces)
+            listdata(Stock(), stock, 'yahoo', start, end, pieces, mydb)
         except:
             print('Error obtaning ' + stock + ' information')
 
 
-def listdata(c, symbol, finance, start, end, pieces):
+def listdata(c, symbol, finance, start, end, pieces, mydb):
+    mycol = mydb[symbol[1:]]
     s = c.getquote(symbol, finance, start, end)
     cleandata = c.cleandata(s)
     groupby = c.groupdata(cleandata, pieces)
-    print(groupby)
+    try:
+        mycol.insert_many(groupby)
+    except:
+        print('Error inserting: ' + symbol + " " + groupby)
 
 
-try:
-    mongo = DatabasePool.DatabasePool()
-    dbc = mongo.connect_mongo()
-except:
-    print('Error connecting to mongodb')
+def main(startyear, endyear, pieces):
+    try:
+        mongo = DatabasePool.DatabasePool()
+        dbc = mongo.connect_mongo()
+        mydb = dbc["stocks"]
+    except:
+        print('Error connecting to mongodb')
 
-for year in range(2021, 2021):
-    for lst in md:
-        for month in lst.items():
-            start = str(year) + "-" + month[0] + "-" + '01'
-            end = str(year) + "-" + month[0] + "-" + month[1]
-            print(start + " " + end)
-            analyzestock(None, start, end, 1)
+    for year in range(startyear, endyear):
+        for lst in md:
+            for month in lst.items():
+                start = str(year) + "-" + month[0] + "-" + '01'
+                end = str(year) + "-" + month[0] + "-" + month[1]
+                print("Period: " + start + " " + end)
+                analyzestock(None, start, end, pieces, mydb)
 
-dbc.close()
+    dbc.close()
+
+### bloco principal
+dtinicial = datetime.now()
+main(2000, 2021, 1)
+print("Decorridos: ", datetime.now() - dtinicial)
