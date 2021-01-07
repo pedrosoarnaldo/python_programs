@@ -83,9 +83,9 @@ if __name__ == "__main__":
                         else:
                             print("\r[***] Error processing {} pwd {} . "
                                   "Retrying {} time(s)".format(username, password, retry), end="")
-                        time.sleep(5 * retry)
+                        time.sleep(30 * retry)
                     else:
-                        time.sleep(1)
+                        time.sleep(0.5)
                 if retry > 0:
                     print("")
             except:
