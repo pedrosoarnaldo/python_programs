@@ -19,7 +19,7 @@ def attempt(server, port, username, password):
         except socket.error as error:
             pass
         except paramiko.SSHException as error:
-            time.sleep(10)
+            time.sleep(30)
             return
         except Exception as error:
             print("Unknown error: " + error)
@@ -64,11 +64,12 @@ if __name__ == "__main__":
     for username in usernames:
         for password in passwords:
             i = i + 1
+            print("\r[*] Iterations {}".format(i), end="")
             try:
                 attempt(server, port, username, password)
-                time.sleep(0.3)
+                time.sleep(1)
             except:
-                print('Error')
+                print('\nError')
 
-    print("[*] {} combinations tested".format(i)) 
+    print("\n[*] {} combinations tested".format(i))
     print("[*] Brute force finished")
