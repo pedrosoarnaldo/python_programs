@@ -1,12 +1,18 @@
-root
-admin
 administrator
 webadmin
 sysadmin
 netadmin
+nobody
 guest
 user
 web
+apache
+daemon
+adm
+sshuser
+webuser
+ftpuser
+ftproot
 marcelo
 gabban
 tania
@@ -18,3 +24,5 @@ m.newtton
 m.newton
 mnewton
 mnewtton
+root
+admin

@@ -7,7 +7,9 @@ from optparse import OptionParser
 def connection(ssh):
     try:
         ssh.connect(server, port, username, password)
-        print("\n[-] Connected successfully. Username = " + username + " and Password = " + password)
+        print("\n")
+        print("\n[----] Connected successfully. Username = " + username + " and Password = " + password)
+        print("\n")
     except paramiko.AuthenticationException as error:
         pass
     except paramiko.SSHException as error:
@@ -85,7 +87,7 @@ if __name__ == "__main__":
                                   "Retrying {} time(s)".format(username, password, retry), end="")
                         time.sleep(30 * retry)
                     else:
-                        time.sleep(0.5)
+                        time.sleep(0.4)
                 if retry > 0:
                     print("")
             except:
