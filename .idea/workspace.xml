@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c53d08b0-89bd-4bec-9e5e-bfbc45e8679a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/irisClassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neuralNetwork/neuronioSimples.py" beforeDir="false" afterPath="$PROJECT_DIR$/neuralNetwork/neuronioSimples.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,6 @@
   <component name="ProjectId" id="1TJScuiou4bHopAiGm85rXxE2cr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -38,28 +37,7 @@
       <recent name="$PROJECT_DIR$/neuralNetwork" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.irisClassifier">
-    <configuration name="_pydev_execfile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python_programs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_imps" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.neuronioSimples">
     <configuration name="example01_simplePerceptron" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,13 +122,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testIris" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_programs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neuralNetwork" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neuralNetwork/testIris.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.neuronioSimples" />
+        <item itemvalue="Python.testIris" />
         <item itemvalue="Python.irisClassifier" />
         <item itemvalue="Python.neuronioJaTreinado" />
-        <item itemvalue="Python.neuronioSimples" />
         <item itemvalue="Python.example01_simplePerceptron" />
-        <item itemvalue="Python._pydev_execfile" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +302,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579783395152</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="simple perceptron example">
+      <created>1580008718662</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1580008718662</updated>
+    </task>
+    <task id="LOCAL-00020" summary="simple perceptron example">
+      <created>1580514867891</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1580514867891</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,13 +324,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created a config file to key in azure." />
@@ -325,78 +337,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="simple perceptron example" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="259" y="23" key="CommitChangelistDialog2" timestamp="1579783856352">
-      <screen x="0" y="23" width="1280" height="715" />
+    <state width="1249" height="246" key="GridCell.Tab.0.bottom" timestamp="1608401444184">
+      <screen x="0" y="25" width="1280" height="705" />
     </state>
-    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1579783856352" />
-    <state x="259" y="23" key="CommitChangelistDialog2/0.23.1280.716@0.23.1280.716" timestamp="1579749235188" />
-    <state width="1249" height="199" key="GridCell.Tab.0.bottom" timestamp="1579965776412">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1249" height="246" key="GridCell.Tab.0.bottom/0.25.1280.705@0.25.1280.705" timestamp="1608401444184" />
+    <state width="1249" height="246" key="GridCell.Tab.0.center" timestamp="1608401444162">
+      <screen x="0" y="25" width="1280" height="705" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.bottom/0.23.1280.713@0.23.1280.713" timestamp="1579965776412" />
-    <state width="1249" height="125" key="GridCell.Tab.0.bottom/0.23.1280.715@0.23.1280.715" timestamp="1579783871733" />
-    <state width="1249" height="125" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579752863615" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1579671605586" />
-    <state width="1249" height="146" key="GridCell.Tab.0.bottom/0.23.1280.724@0.23.1280.724" timestamp="1579668534966" />
-    <state width="1249" height="199" key="GridCell.Tab.0.center" timestamp="1579965776411">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1249" height="246" key="GridCell.Tab.0.center/0.25.1280.705@0.25.1280.705" timestamp="1608401444162" />
+    <state width="1249" height="246" key="GridCell.Tab.0.left" timestamp="1608401444158">
+      <screen x="0" y="25" width="1280" height="705" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.center/0.23.1280.713@0.23.1280.713" timestamp="1579965776411" />
-    <state width="1249" height="125" key="GridCell.Tab.0.center/0.23.1280.715@0.23.1280.715" timestamp="1579783871732" />
-    <state width="1249" height="125" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
-    <state width="1249" height="146" key="GridCell.Tab.0.center/0.23.1280.724@0.23.1280.724" timestamp="1579668534965" />
-    <state width="1249" height="199" key="GridCell.Tab.0.left" timestamp="1579965776410">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1249" height="246" key="GridCell.Tab.0.left/0.25.1280.705@0.25.1280.705" timestamp="1608401444158" />
+    <state width="1249" height="246" key="GridCell.Tab.0.right" timestamp="1608401444171">
+      <screen x="0" y="25" width="1280" height="705" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.left/0.23.1280.713@0.23.1280.713" timestamp="1579965776410" />
-    <state width="1249" height="125" key="GridCell.Tab.0.left/0.23.1280.715@0.23.1280.715" timestamp="1579783871731" />
-    <state width="1249" height="125" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1579744117215" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
-    <state width="1249" height="146" key="GridCell.Tab.0.left/0.23.1280.724@0.23.1280.724" timestamp="1579668534965" />
-    <state width="1249" height="199" key="GridCell.Tab.0.right" timestamp="1579965776411">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1249" height="246" key="GridCell.Tab.0.right/0.25.1280.705@0.25.1280.705" timestamp="1608401444171" />
+    <state x="312" y="204" key="com.intellij.ide.util.TipDialog" timestamp="1608400782076">
+      <screen x="0" y="25" width="1280" height="705" />
     </state>
-    <state width="1249" height="199" key="GridCell.Tab.0.right/0.23.1280.713@0.23.1280.713" timestamp="1579965776411" />
-    <state width="1249" height="125" key="GridCell.Tab.0.right/0.23.1280.715@0.23.1280.715" timestamp="1579783871732" />
-    <state width="1249" height="125" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1579752863614" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1579744117216" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1579671605585" />
-    <state width="1249" height="146" key="GridCell.Tab.0.right/0.23.1280.724@0.23.1280.724" timestamp="1579668534966" />
-    <state width="1249" height="215" key="GridCell.Tab.1.bottom" timestamp="1579742905863">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.bottom/0.23.1280.716@0.23.1280.716" timestamp="1579742905863" />
-    <state width="1249" height="215" key="GridCell.Tab.1.center" timestamp="1579742905862">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.center/0.23.1280.716@0.23.1280.716" timestamp="1579742905862" />
-    <state width="1249" height="215" key="GridCell.Tab.1.left" timestamp="1579742905861">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.left/0.23.1280.716@0.23.1280.716" timestamp="1579742905861" />
-    <state width="1249" height="215" key="GridCell.Tab.1.right" timestamp="1579742905862">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state width="1249" height="215" key="GridCell.Tab.1.right/0.23.1280.716@0.23.1280.716" timestamp="1579742905862" />
-    <state x="136" y="23" width="997" height="721" key="SettingsEditor" timestamp="1579743964752">
-      <screen x="0" y="23" width="1280" height="721" />
-    </state>
-    <state x="136" y="23" width="997" height="715" key="SettingsEditor/0.23.1280.715@0.23.1280.715" timestamp="1579569005411" />
-    <state x="136" y="23" key="SettingsEditor/0.23.1280.716@0.23.1280.716" timestamp="1579678059813" />
-    <state x="136" y="23" width="997" height="721" key="SettingsEditor/0.23.1280.721@0.23.1280.721" timestamp="1579743964752" />
-    <state x="312" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1579782510698">
-      <screen x="0" y="23" width="1280" height="715" />
-    </state>
-    <state x="312" y="205" key="com.intellij.ide.util.TipDialog/0.23.1280.713@0.23.1280.713" timestamp="1579652636557" />
-    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.715@0.23.1280.715" timestamp="1579782510698" />
-    <state x="312" y="206" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1579739832137" />
-    <state x="300" y="63" width="670" height="676" key="search.everywhere.popup" timestamp="1579659853385">
-      <screen x="0" y="23" width="1280" height="716" />
-    </state>
-    <state x="300" y="63" width="670" height="676" key="search.everywhere.popup/0.23.1280.716@0.23.1280.716" timestamp="1579659853385" />
+    <state x="312" y="204" key="com.intellij.ide.util.TipDialog/0.25.1280.705@0.25.1280.705" timestamp="1608400782076" />
+    <state x="312" y="205" key="com.intellij.ide.util.TipDialog/0.25.1280.708@0.25.1280.708" timestamp="1608398288603" />
   </component>
 </project>
